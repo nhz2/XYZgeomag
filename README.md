@@ -84,7 +84,7 @@ int main(void)
 {
   float3 *magv;
   int blocks= 32;
-  int threadsperblock= 128;
+  int threadsperblock= 64;
   // Allocate Unified Memory – accessible from CPU or GPU
   cudaMallocManaged(&magv, sizeof(float3)*threadsperblock*blocks);
   mag<<<blocks, threadsperblock>>>(magv);
@@ -100,8 +100,6 @@ int main(void)
 }
 ~~~
 
-
-
 ## Adding New Coefficents
 
 To add new coefficents, download the new `.COF` file from [https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml)
@@ -112,3 +110,26 @@ Then run for example
 `python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -o ../geomag.hpp -n 12` from the `test_codegen` directory.
 
 In this example, `WMM2015.COF` and `WMM2015v2.COF` are the `.COF` files to use in `geomag.hpp`.
+
+## Run Tests
+
+In the `test_codegen` directory.
+
+Compile `geomag_test.cpp` for example with the command `g++ geomag_test.cpp -std=c++14`
+
+Run the tests for example with the command `./a.out`
+
+To add new models to the test update `wmmtestgen.py` and run it.
+
+## References
+
+Using spherical harmonics algorithm, described in sections 3.2.4 and 3.2.5:
+
+  Satellite Orbits Models, Methods and Applications,
+    by Oliver Montenbruck and Eberhard Gill 2000
+
+Using coefficients and test points from:
+
+Chulliat, A., W. Brown, P. Alken, S. Macmillan, M. Nair, C. Beggan, A. Woods, B. Hamilton, B. Meyer and R. Redmon, 2019, Out-of-Cycle Update of the US/UK World Magnetic Model for 2015-2020: Technical Note, National Centers for Environmental Information, NOAA. doi: 10.25921/xhr3-0t19.
+
+Chulliat, A., S. Macmillan, P. Alken, C. Beggan, M. Nair, B. Hamilton, A. Woods, V. Ridley, S. Maus and A. Thomson, 2015. The US/UK World Magnetic Model for 2015-2020: Technical Report, NOAA National Geophysical Data Center, Boulder, CO, doi: 10.7289/V5TB14V7.
