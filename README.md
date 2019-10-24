@@ -16,7 +16,7 @@ geomag uses single precision floating points. It's designed to minimize ram usag
 | Device      | Speed    |
 |-------------|----------|
 | Arduino Uno | 50 ms    |
-| Teensy 3.6  |  80 \mus |
+| Teensy 3.6  |  80 µs |
 |             |          |
 
 ## Using geomag
