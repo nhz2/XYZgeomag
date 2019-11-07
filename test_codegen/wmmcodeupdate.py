@@ -71,7 +71,7 @@ def main(infilenames, headerfilename, maxdegree):
             c_secvars[((2*maxdegree-m+1)*m)//2+n]= gsec*unnorm
             s_secvars[((2*maxdegree-m+1)*m)//2+n]= hsec*unnorm
         outstr = outstr + header_file_model_code(infilename[:-4],dyear,c_cofs,s_cofs,c_secvars,s_secvars)
-    outstr = outstr + "}\n#endif /* __GEOMAG_HPP */"
+    outstr = outstr + "}\n#endif /* GEOMAG_HPP */"
     with open(headerfilename,'w') as f:
         f.write(outstr)
 
@@ -131,8 +131,8 @@ Modifications are:
     Satellite Orbits Models, Methods and Applications,
       by Oliver Montenbruck and Eberhard Gill 2000
 */
-#ifndef __GEOMAG_HPP
-#define __GEOMAG_HPP
+#ifndef GEOMAG_HPP
+#define GEOMAG_HPP
 
 #include <math.h>
 
