@@ -443,3 +443,219 @@ TEST_CASE( "geomag test 23 of WMM2015v2 model", "[GeoMag]" ) {
 
 
         
+TEST_CASE( "geomag test 24 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= 1111164.8708100126;
+    in.y= 0.0;
+    in.z= 6259542.961028692;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -1.5952813250071817e-05;
+    truth.y= -1.4630000000000003e-07;
+    truth.z= -5.263547417444184e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 25 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -3189068.4999999986;
+    in.y= 5523628.670817469;
+    in.z= 0.0;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -5.561426191875908e-06;
+    truth.y= 9.412872726873378e-06;
+    truth.z= 3.9624300000000006e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 26 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -555582.4354050067;
+    in.y= -962297.0059143244;
+    in.z= -6259542.961028692;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= 6.177267161005052e-06;
+    truth.y= -2.084485942521248e-05;
+    truth.z= -5.0651924360034926e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 27 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= 1128529.6885767058;
+    in.y= 0.0;
+    in.z= 6358023.736329913;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -1.5270886859529107e-05;
+    truth.y= -1.8550000000000001e-07;
+    truth.z= -5.054523400453757e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 28 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -3239068.4999999986;
+    in.y= 5610231.211195913;
+    in.z= 0.0;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -5.328246064856985e-06;
+    truth.y= 9.01899289956124e-06;
+    truth.z= 3.76367e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 29 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -564264.8442883533;
+    in.y= -977335.3792323681;
+    in.z= -6358023.736329913;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= 5.6493843086129155e-06;
+    truth.y= -1.9813979346000043e-05;
+    truth.z= -4.821266111748948e-05;
+    out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 30 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= 1111164.8708100126;
+    in.y= 0.0;
+    in.z= 6259542.961028692;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -1.5931578350356247e-05;
+    truth.y= 1.1000000000000001e-09;
+    truth.z= -5.274827527831086e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 31 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -3189068.4999999986;
+    in.y= 5523628.670817469;
+    in.z= 0.0;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -5.368203727960294e-06;
+    truth.y= 9.382401602207892e-06;
+    truth.z= 3.9684699999999996e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 32 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -555582.4354050067;
+    in.y= -962297.0059143244;
+    in.z= -6259542.961028692;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= 6.163777504796277e-06;
+    truth.y= -2.0877424195142713e-05;
+    truth.z= -5.04130265263596e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 33 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= 1128529.6885767058;
+    in.y= 0.0;
+    in.z= 6358023.736329913;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -1.5250661283058837e-05;
+    truth.y= -4.45e-08;
+    truth.z= -5.0648210584673275e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 34 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -3239068.4999999986;
+    in.y= 5610231.211195913;
+    in.z= 0.0;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= -5.150429303246407e-06;
+    truth.y= 8.991405234014355e-06;
+    truth.z= 3.7694e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        
+TEST_CASE( "geomag test 35 of WMM2020 model", "[GeoMag]" ) {
+    geomag::Vector in;
+    in.x= -564264.8442883533;
+    in.y= -977335.3792323681;
+    in.z= -6358023.736329913;
+    geomag::Vector out;
+    geomag::Vector truth;
+    truth.x= 5.636486923202327e-06;
+    truth.y= -1.984331827281598e-05;
+    truth.z= -4.798964104031512e-05;
+    out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
+    CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(5) );
+    CHECK( out.y*1E9 == Approx(truth.y*1E9).margin(5) );
+    CHECK( out.z*1E9 == Approx(truth.z*1E9).margin(5) );
+}
+
+
+        

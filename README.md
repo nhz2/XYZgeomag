@@ -130,6 +130,8 @@ Using spherical harmonics algorithm, described in sections 3.2.4 and 3.2.5:
 
 Using coefficients and test points from:
 
+NCEI Geomagnetic Modeling Team and British Geological Survey. 2019. World Magnetic Model 2020. NOAA National Centers for Environmental Information. doi: 10.25921/11v3-da71, 2020, [10 DEC 2019].
+
 Chulliat, A., W. Brown, P. Alken, S. Macmillan, M. Nair, C. Beggan, A. Woods, B. Hamilton, B. Meyer and R. Redmon, 2019, Out-of-Cycle Update of the US/UK World Magnetic Model for 2015-2020: Technical Note, National Centers for Environmental Information, NOAA. doi: 10.25921/xhr3-0t19.
 
 Chulliat, A., S. Macmillan, P. Alken, C. Beggan, M. Nair, B. Hamilton, A. Woods, V. Ridley, S. Maus and A. Thomson, 2015. The US/UK World Magnetic Model for 2015-2020: Technical Report, NOAA National Geophysical Data Center, Boulder, CO, doi: 10.7289/V5TB14V7.
