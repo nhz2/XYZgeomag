@@ -42,7 +42,7 @@ void loop() {
   geomag::Vector out;
   int starttime=micros();
   int starttimemil=millis();
-  out=geomag::GeoMag(2017.5,in,geomag::WMM2015);
+  out=geomag::GeoMag(2022.5,in,geomag::WMM2020);
   int endtime=micros();
   int endtimemil=millis();
   Serial.println(out.x*1E9);
