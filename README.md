@@ -107,9 +107,9 @@ To add new coefficents, download the new `.COF` file from [https://www.ngdc.noaa
 Add the .COF file to the `test_codegen` directory.
 
 Then run for example
-`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -o ../geomag.hpp -n 12` from the `test_codegen` directory.
+`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../geomag.hpp -n 12` from the `test_codegen` directory.
 
-In this example, `WMM2015.COF` and `WMM2015v2.COF` are the `.COF` files to use in `geomag.hpp`.
+In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `geomag.hpp`.
 
 ## Run Tests
 
