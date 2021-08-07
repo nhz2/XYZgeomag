@@ -31,7 +31,6 @@ import math
 def main(infilenames, headerfilename, maxdegree):
     """parse infilenames into headerfilename c++ header file
 
-    The coefficents are un Schmidt semi-normalized.
     indexing is by ((2*maxdegree-m+1)*m)/2+n
     Args:
         infilenames(list of filenames): the .COF files that contains the
@@ -62,14 +61,10 @@ def main(infilenames, headerfilename, maxdegree):
             h= cof[3]
             gsec= cof[4]
             hsec= cof[5]
-            if (m==0):
-                unnorm= 1.0
-            else:
-                unnorm= math.sqrt(2.0*float(math.factorial(n-m))/float(math.factorial(n+m)))
-            c_cofs[((2*maxdegree-m+1)*m)//2+n]= g*unnorm
-            s_cofs[((2*maxdegree-m+1)*m)//2+n]= h*unnorm
-            c_secvars[((2*maxdegree-m+1)*m)//2+n]= gsec*unnorm
-            s_secvars[((2*maxdegree-m+1)*m)//2+n]= hsec*unnorm
+            c_cofs[((2*maxdegree-m+1)*m)//2+n]= g
+            s_cofs[((2*maxdegree-m+1)*m)//2+n]= h
+            c_secvars[((2*maxdegree-m+1)*m)//2+n]= gsec
+            s_secvars[((2*maxdegree-m+1)*m)//2+n]= hsec
         outstr = outstr + header_file_model_code(infilename[:-4],dyear,c_cofs,s_cofs,c_secvars,s_secvars)
     outstr = outstr + "}\n#endif /* GEOMAG_HPP */"
     with open(headerfilename,'w') as f:
@@ -126,7 +121,6 @@ The data from WMM2015, is not subject to copyright protection.
 Modifications are:
   using ITRS coordinates,
   conversion from nT to T,
-  Using unnormalized coefficents genrated by the python script wmmcodeupdate.py
   using a different spherical harmonics calculation, described in sections 3.2.4 and 3.2.5:
     Satellite Orbits Models, Methods and Applications,
       by Oliver Montenbruck and Eberhard Gill 2000
