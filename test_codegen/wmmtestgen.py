@@ -82,5 +82,5 @@ if __name__ == '__main__':
     bes+=[-146.3,109.9,15772.1,-185.5,104.9,14799.5,1.1,-42.2,15776.7,-44.5,-35.3,14803.0]
     bds+=[54606.0,-10932.5,-52480.8,52429.1,-10474.8,-49969.4,54713.4,-10809.5,-52251.6,52527.0,-10362.0,-49755.3]
 
-    margin= 0.0001#nT error acceptable
+    margin= 0.1#nT error acceptable
     main(header_to_test,modelnames,np.array(dates),np.array(heights),np.array(lats),np.array(lons),np.array(bns),np.array(bes),np.array(bds),margin)
