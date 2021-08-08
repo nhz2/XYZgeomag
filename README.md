@@ -1,5 +1,5 @@
 # XYZgeomag
-Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates instead of latitude, longitude, and altitude. Compatible with CUDA and Arduino.
+Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates instead of latitude, longitude, and altitude. Compatible with Arduino.
 
 XYZgeomag calculates the magnetic field around earth in the International Terrestrial Reference System(ITRS) and uses units of decimal year, meter, and tesla.
 
@@ -7,7 +7,7 @@ Unlike most World Magnetic Model(WMM) software, which uses latitude, longitude, 
 
 ## Error
 
-XYZgeomag is within 10nT of the official WMM software.
+XYZgeomag is within 0.5 nT of the official WMM software.
 
 ## Performance
 
@@ -15,9 +15,10 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 | Device      | Speed    |
 |-------------|----------|
-| Arduino Uno | 50 ms    |
-| Teensy 3.6  |  80 µs |
-| GeForce GT 750M  |  262 µs   |
+| Arduino Uno | 52 ms    |
+| Raspberry Pi Pico | 6.5 ms |
+| Teensy 3.6  |  83 µs |
+| Teensy 4.0  |  21 µs |
 
 ## Using XYZgeomag
 
@@ -57,48 +58,6 @@ void loop() {
 ~~~
 
 
-Here is an example CUDA program:
-
-~~~cpp
-#include <iostream>
-#include "geomag.hpp"
-
-__constant__ const geomag::ConstModel WMM = geomag::WMM2015;
-
-__global__
-void mag(float3* result)
-{
-  int index = threadIdx.x+blockDim.x*blockIdx.x;
-  geomag::Vector in;
-  in.x=1128529.6885767058f;
-  in.y=0.0f + index*100.0f;
-  in.z=6358023.736329913f;
-  geomag::Vector out;
-  out=geomag::GeoMag(2017.5,in,WMM);
-  result[index].x= out.x*1E9f;
-  result[index].y= out.y*1E9f;
-  result[index].z= out.z*1E9f;
-}
-
-int main(void)
-{
-  float3 *magv;
-  int blocks= 32;
-  int threadsperblock= 64;
-  // Allocate Unified Memory – accessible from CPU or GPU
-  cudaMallocManaged(&magv, sizeof(float3)*threadsperblock*blocks);
-  mag<<<blocks, threadsperblock>>>(magv);
-  // Wait for GPU to finish before accessing on host
-  cudaDeviceSynchronize();
-  // Print magnetic field
-  for (int i=0; i<threadsperblock*blocks; i++){
-    std::cout << "Mag field: " << magv[i].x << magv[i].y << magv[i].z << std::endl;
-  }
-  // Free memory
-  cudaFree(magv);
-  return 0;
-}
-~~~
 
 ## Adding New Coefficents
 
