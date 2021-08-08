@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.7
+# v0.15.1
 
 using Markdown
 using InteractiveUtils
@@ -714,6 +714,32 @@ end
 # ╔═╡ 78feafbd-f11b-48b1-b145-a14dc1fc1b3a
 recsqrt(1)
 
+# ╔═╡ 00000000-0000-0000-0000-000000000001
+PLUTO_PROJECT_TOML_CONTENTS = """
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+"""
+
+# ╔═╡ 00000000-0000-0000-0000-000000000002
+PLUTO_MANIFEST_TOML_CONTENTS = """
+# This file is machine-generated - editing it directly is not advised
+
+[[Libdl]]
+uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
+
+[[LinearAlgebra]]
+deps = ["Libdl"]
+uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[[Random]]
+deps = ["Serialization"]
+uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
+[[Serialization]]
+uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
+"""
+
 # ╔═╡ Cell order:
 # ╠═1764fb52-c62d-11eb-0b88-9f632da0c4f7
 # ╠═57f856ab-c04e-46a6-883d-44eb39c248fe
@@ -764,3 +790,5 @@ recsqrt(1)
 # ╠═78feafbd-f11b-48b1-b145-a14dc1fc1b3a
 # ╠═8fdf5004-b7c5-4575-b455-2ec40748f355
 # ╠═927a8e03-2db7-4d35-b391-5d5cd13f6ea4
+# ╟─00000000-0000-0000-0000-000000000001
+# ╟─00000000-0000-0000-0000-000000000002
