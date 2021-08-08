@@ -1,6 +1,6 @@
 # XYZgeomag
 
-[![Build Status](https://github.com/nhz2/XYZgeomag/workflows/build/badge.svg)](https://github.com/nhz2/XYZgeomag/actions)
+[![Build Status](https://github.com/nhz2/XYZgeomag/workflows/test/badge.svg)](https://github.com/nhz2/XYZgeomag/actions)
 
 Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates instead of latitude, longitude, and altitude. Compatible with Arduino.
 
