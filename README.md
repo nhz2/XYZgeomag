@@ -1,4 +1,7 @@
 # XYZgeomag
+
+[![Build Status](https://github.com/nhz2/XYZgeomag/workflows/build/badge.svg)](https://github.com/nhz2/XYZgeomag/actions)
+
 Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates instead of latitude, longitude, and altitude. Compatible with Arduino.
 
 XYZgeomag calculates the magnetic field around earth in the International Terrestrial Reference System(ITRS) and uses units of decimal year, meter, and tesla.

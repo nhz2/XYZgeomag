@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
+
+jobs:
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: compile tests
+      working-directory: ${{github.workspace}}/test_codegen
+      run: g++ geomag_test.cpp -std=c++14
+    - name: run tests
+      working-directory: ${{github.workspace}}/test_codegen
+      run: ./a.out
