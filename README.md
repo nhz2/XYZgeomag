@@ -10,7 +10,7 @@ Unlike most World Magnetic Model(WMM) software, which uses latitude, longitude, 
 
 ## Error
 
-XYZgeomag is within 0.5 nT of the official WMM software.
+XYZgeomag is within 0.5 nT of the official WMM software. 
 
 ## Performance
 
