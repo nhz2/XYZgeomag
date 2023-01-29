@@ -6,6 +6,39 @@ import pymap3d as pm
 import numpy as np
 
 
+def add_geodetic_2_ecef_tests(outstr, num_tests, seed):
+    """Return outstr append with geodetic 2 ecef conversion tests
+    
+    Args:
+        outstr(str): the c++ tests to add to.
+        num_tests(int): number of test points to use.
+        seed(int): Seed to use to generate test points.
+    """
+    rng = np.random.default_rng(seed)
+    for i in range(num_tests):
+        lat = rng.uniform(-90,90) # test lat (deg)
+        lon = rng.uniform(0,360) # test lon (deg)
+        height = rng.uniform(-1E6,1E6) # test height (m) with respect to wgs 84 ellipsoid
+        x, y, z = pm.geodetic2ecef(lat,lon,height)
+        margin = 1.0 # error margin in meters
+        testcase="""
+TEST_CASE( "geodetic 2 ecef test %s model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(%s, %s, %s);
+    geomag::Vector truth;
+    truth.x= %s;
+    truth.y= %s;
+    truth.z= %s;
+    CHECK( out.x == Approx(truth.x).margin(%s) );
+    CHECK( out.y == Approx(truth.y).margin(%s) );
+    CHECK( out.z == Approx(truth.z).margin(%s) );
+}
+
+
+        """%(i,repr(lat),repr(lon),repr(height),repr(x),repr(y),repr(z),margin,margin,margin)
+        outstr=outstr+testcase
+    return outstr
+
+
 def main(header_to_test,modelnames,dates,heights,lats,lons,bns,bes,bds,margin):
     """create and write catch2 tests as a c++ source file to test header_to_test
         defining the WMM coefficents and model
@@ -40,6 +73,8 @@ def main(header_to_test,modelnames,dates,heights,lats,lons,bns,bes,bds,margin):
 #include "../%s"
 
 """%(file_name,file_name,header_to_test)
+
+        outstr = add_geodetic_2_ecef_tests(outstr, 100, 1234)
 
         for i in range(len(xs)):
             testcase="""

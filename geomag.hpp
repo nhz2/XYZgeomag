@@ -80,6 +80,34 @@ typedef struct {
     float z;
 } Vector;
 
+
+/** Return the position in International Terrestrial Reference System coordinates, units meters.
+Using the WGS 84 ellipsoid and the algorithm from https://geographiclib.sourceforge.io/
+ INPUT:
+    lat: Geodetic latitude in degrees, -90 at the south pole, 90 at the north pole.
+    lon: Geodetic longitude in degrees.
+    h: Height above the WGS 84 ellipsoid.
+**/
+inline Vector geodetic2ecef(float lat, float lon, float h){
+    // Convert to radians
+    float phi = lat*((float)(M_PI/180.0));
+    float lam = lon*((float)(M_PI/180.0));
+    // WGS 84 constants
+    const float a = 6378137;
+    // const float f = 1.0/298.257223563;
+    const float e2 = 0.0066943799901413165;//f*(2-f);
+    const float e2m = 0.9933056200098587;//(1-f)*(1-f);
+    float sphi = sinf(phi);
+    float cphi = cosf(phi);
+    float slam = sinf(lam);
+    float clam = cosf(lam);
+    float n = a/sqrtf(1.0f - e2*(sphi*sphi));
+    float z = (e2m*n + h) * sphi;
+    float r = (n + h) * cphi;
+    return {r*clam, r*slam, z};
+}
+
+
 /** Return the magnetic field in International Terrestrial Reference System coordinates, units Tesla.
  INPUT:
     position_itrs(Above the surface of earth): The location where the field is predicted, units m.

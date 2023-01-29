@@ -11,6 +11,1306 @@
 #include "../geomag.hpp"
 
 
+TEST_CASE( "geodetic 2 ecef test 0 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(85.80595800566559, 136.87046460706242, 846492.4675279108);
+    geomag::Vector truth;
+    truth.x= -386748.46124824253;
+    truth.y= 362286.9364363786;
+    truth.z= 7183840.861770877;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 1 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-42.895363704562044, 114.87494102911111, -763817.5340667143);
+    geomag::Vector truth;
+    truth.x= -1733160.0154693073;
+    truth.y= 3738053.698779113;
+    truth.z= -3799091.846974324;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 2 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-46.482067214498684, 114.6722143616015, 928158.4903567526);
+    geomag::Vector truth;
+    truth.x= -2103299.6464065546;
+    truth.y= 4578749.046099419;
+    truth.z= -5275370.369993158;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 3 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-42.54303523048312, 158.7622039392641, 219741.61884501507);
+    geomag::Vector truth;
+    truth.x= -4537692.412803709;
+    truth.y= 1763499.4754362241;
+    truth.z= -4438815.002779411;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 4 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(65.45183338259295, 310.95276147885045, 349762.6266993901);
+    geomag::Vector truth;
+    truth.x= 1836880.285745108;
+    truth.y= -2116610.979842946;
+    truth.z= 6096968.489782659;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 5 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(28.777382632697595, 264.87277139374356, -554492.6837372255);
+    geomag::Vector truth;
+    truth.x= -456556.648761987;
+    truth.y= -5088305.582562283;
+    truth.z= 2785360.9796449402;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 6 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-59.028086760995066, 313.34939009601675, -879722.6843969699);
+    geomag::Vector truth;
+    truth.x= 1947918.6201816287;
+    truth.y= -2063514.2763252722;
+    truth.z= -4691255.42835258;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 7 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(33.064003635481924, 241.64568689068847, 222035.96222202037);
+    geomag::Vector truth;
+    truth.x= -2629497.1693495084;
+    truth.y= -4872435.563039625;
+    truth.z= 3581047.029497689;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 8 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-79.17528370423875, 351.9969384987502, -122096.74650643603);
+    geomag::Vector truth;
+    truth.x= 1167321.9168442066;
+    truth.y= -164120.00286348275;
+    truth.z= -6122976.196662958;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 9 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(5.867103874122691, 1.127623484818563, -497465.78901739145);
+    geomag::Vector truth;
+    truth.x= 5848955.316982091;
+    truth.y= 115126.64812773773;
+    truth.z= 596788.5708181522;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 10 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(64.5282787360195, 153.10740643067436, 471637.98807933414);
+    geomag::Vector truth;
+    truth.x= -2633977.535634029;
+    truth.y= 1335864.979985587;
+    truth.z= 6161081.318450633;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 11 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(75.96777902585501, 55.2507016061216, 984518.4589752383);
+    geomag::Vector truth;
+    truth.x= 1020333.1899133963;
+    truth.y= 1470842.6723895806;
+    truth.z= 7120982.37836692;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 12 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-57.180279087188396, 338.44064482178084, -826233.8894536272);
+    geomag::Vector truth;
+    truth.x= 2806219.109413446;
+    truth.y= -1108758.639054679;
+    truth.z= -4642457.327271439;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 13 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-5.722071286706836, 298.4361119743985, -437895.47406824725);
+    geomag::Vector truth;
+    truth.x= 2814621.73175224;
+    truth.y= -5197701.235258807;
+    truth.z= -588024.1537213781;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 14 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(66.43647201285208, 351.5099667458611, 683427.3148931337);
+    geomag::Vector truth;
+    truth.x= 2799157.470149603;
+    truth.y= -417839.10359423666;
+    truth.z= 6450015.753411284;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 15 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-9.202751941852114, 133.38303471744788, -34661.12597229995);
+    geomag::Vector truth;
+    truth.x= -4301445.6193627305;
+    truth.y= 4551349.970766846;
+    truth.z= -1007761.39164892;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 16 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-73.40732156730962, 81.60591781953342, 73132.47350262431);
+    geomag::Vector truth;
+    truth.x= 269756.2477043016;
+    truth.y= 1828092.2502243256;
+    truth.z= -6160465.046913007;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 17 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(41.98169721075101, 161.60788400836387, -388998.4606849761);
+    geomag::Vector truth;
+    truth.x= -4231415.580682917;
+    truth.y= 1406957.9618820045;
+    truth.z= 3983894.427292069;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 18 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(80.52472859195555, 270.372181089354, -55903.08025552798);
+    geomag::Vector truth;
+    truth.x= 6782.944233601895;
+    truth.y= -1044192.2553058309;
+    truth.z= 6214312.62207652;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 19 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-7.690341672916574, 268.6816091653161, 710799.7556751561);
+    geomag::Vector truth;
+    truth.x= -161645.6143637721;
+    truth.y= -7023696.304783555;
+    truth.z= -942972.4329840017;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 20 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-37.16971953548225, 263.9932197541838, 617661.4051245824);
+    geomag::Vector truth;
+    truth.x= -584011.1846461957;
+    truth.y= -5550177.161206787;
+    truth.z= -4205596.399412376;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 21 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(69.67565535091256, 8.939956056130033, 25098.89538340899);
+    geomag::Vector truth;
+    truth.x= 2203513.803577948;
+    truth.y= 346635.56037137774;
+    truth.z= 5982104.493357421;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 22 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(20.301422467915174, 100.92562258645214, -95736.54685187468);
+    geomag::Vector truth;
+    truth.x= -1117221.2019370545;
+    truth.y= 5787707.209885989;
+    truth.z= 2165806.884149973;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 23 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(5.619796022103316, 355.90844283431807, -988043.662253971);
+    geomag::Vector truth;
+    truth.x= 5350718.101604127;
+    truth.y= -382751.74329790275;
+    truth.z= 523672.9974327731;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 24 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-53.7681085962691, 92.47528668289549, -318510.32188730536);
+    geomag::Vector truth;
+    truth.x= -155038.30400401866;
+    truth.y= 3586458.654391049;
+    truth.z= -4864610.336676545;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 25 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-80.45964674181373, 117.5380183370414, -603283.5856338363);
+    geomag::Vector truth;
+    truth.x= -444118.701368536;
+    truth.y= 851763.6868383316;
+    truth.z= -5673312.944098587;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 26 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(59.25868368735962, 229.36378630712383, -829118.5286745253);
+    geomag::Vector truth;
+    truth.x= -1852520.2051006772;
+    truth.y= -2158609.7180715445;
+    truth.z= 4746108.060320271;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 27 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-50.371121288270984, 245.2233620327385, -731179.8211427378);
+    geomag::Vector truth;
+    truth.x= -1512801.8601368188;
+    truth.y= -3277512.23871574;
+    truth.z= -4326072.4725543605;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 28 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(82.17246435624781, 49.14863186585396, 595404.2779486205);
+    geomag::Vector truth;
+    truth.x= 623098.7628341495;
+    truth.y= 720559.8161813183;
+    truth.z= 6886986.317564222;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 29 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-0.30716594635443073, 109.69478186178073, -531587.8955866382);
+    geomag::Vector truth;
+    truth.x= -1970314.5633418737;
+    truth.y= 5504454.71496927;
+    truth.z= -31114.63322888564;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 30 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(70.74146991917391, 135.91314142318936, -847309.0967577193);
+    geomag::Vector truth;
+    truth.x= -1314853.4144361322;
+    truth.y= 1273596.9483035658;
+    truth.z= 5198935.659214968;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 31 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-83.91476620124972, 166.18079600395825, 747647.9214729795);
+    geomag::Vector truth;
+    truth.x= -735707.3497204372;
+    truth.y= 180968.54493163477;
+    truth.z= -7064129.705001218;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 32 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-26.89029161647005, 296.467398592178, 894398.1487343037);
+    geomag::Vector truth;
+    truth.x= 2892556.4983826824;
+    truth.y= -5809847.107709862;
+    truth.z= -3271900.85068296;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 33 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-77.93267221981475, 107.22243262270433, 238322.03273450583);
+    geomag::Vector truth;
+    truth.x= -410823.3112314675;
+    truth.y= 1325318.566599376;
+    truth.z= -6448425.087127319;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 34 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-35.68366266836679, 62.94472240502789, -8989.609564705985);
+    geomag::Vector truth;
+    truth.x= 2355781.156293638;
+    truth.y= 4612474.415269848;
+    truth.z= -3694495.0110462005;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 35 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(46.9026720478891, 247.4141677459151, -503690.4410486638);
+    geomag::Vector truth;
+    truth.x= -1544507.6148439413;
+    truth.y= -3713028.825453664;
+    truth.z= 4266587.082471056;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 36 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(21.968386989513448, 113.63604868067345, -445567.16558325244);
+    geomag::Vector truth;
+    truth.x= -2206926.9066051263;
+    truth.y= 5042805.384685448;
+    truth.z= 2204482.4851108375;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 37 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(77.37573794315168, 100.65429688267945, 897670.0310792015);
+    geomag::Vector truth;
+    truth.x= -294821.28112199006;
+    truth.y= 1567148.5064766863;
+    truth.z= 7078043.393414046;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 38 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-53.636876766432394, 203.57222927845197, -239393.73914879875);
+    geomag::Vector truth;
+    truth.x= -3343507.2978351377;
+    truth.y= -1458812.9419542912;
+    truth.z= -4920106.401889051;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 39 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(55.45921090352121, 45.9193204611562, 902679.102673295);
+    geomag::Vector truth;
+    truth.x= 2877579.9185016397;
+    truth.y= 2971436.4283616017;
+    truth.z= 5974095.605571776;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 40 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(41.18892430898239, 63.1961992143506, 385518.1871629914);
+    geomag::Vector truth;
+    truth.x= 2298387.996523916;
+    truth.y= 4549284.9732910115;
+    truth.z= 4432115.825565228;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 41 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-73.29005572645039, 200.30456541044632, -795011.7305390012);
+    geomag::Vector truth;
+    truth.x= -1510852.194274299;
+    truth.y= -559018.0610002903;
+    truth.z= -5325187.380422028;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 42 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-82.13521656373767, 141.36858240307603, 382108.1225654767);
+    geomag::Vector truth;
+    truth.x= -724873.8308779501;
+    truth.y= 579310.2386810994;
+    truth.z= -6675075.799124242;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 43 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(40.85593763916549, 240.8513754735726, 183109.46729537332);
+    geomag::Vector truth;
+    truth.x= -2420560.9084457248;
+    truth.y= -4340217.692361043;
+    truth.z= 4270118.575232239;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 44 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(68.22009928142415, 193.5567550606445, -804355.2046794312);
+    geomag::Vector truth;
+    truth.x= -2017155.850913317;
+    truth.y= -486390.06345456006;
+    truth.z= 5153308.432529894;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 45 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-64.56675177208118, 346.42083213798963, 596207.8084404366);
+    geomag::Vector truth;
+    truth.x= 2918768.8529290925;
+    truth.y= -705001.2537370798;
+    truth.z= -6275558.0474646725;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 46 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-88.78432102539718, 340.4921557639148, 310845.17111152154);
+    geomag::Vector truth;
+    truth.x= 134195.96891173435;
+    truth.y= -47541.96232754195;
+    truth.z= -6666087.070547508;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 47 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(73.92322243304704, 54.93047754417387, 177264.63816981507);
+    geomag::Vector truth;
+    truth.x= 1046200.0539144858;
+    truth.y= 1490276.5518013483;
+    truth.z= 6276903.331332793;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 48 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(0.6778079307034943, 62.57123351290598, -874299.4033333688);
+    geomag::Vector truth;
+    truth.x= 2535141.839712133;
+    truth.y= 4884780.227702196;
+    truth.z= 64603.70476977859;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 49 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(29.618700032666567, 11.485892172465766, -523688.79975897074);
+    geomag::Vector truth;
+    truth.x= 4991993.986415555;
+    truth.y= 1014352.6716531629;
+    truth.z= 2874879.130278461;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 50 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(2.7773376397963148, 216.8488150533544, -434080.9366384293);
+    geomag::Vector truth;
+    truth.x= -4751009.757131552;
+    truth.y= -3560526.532815809;
+    truth.z= 285950.9947633794;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 51 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(61.76340057234245, 322.0940067982797, 446382.454887107);
+    geomag::Vector truth;
+    truth.x= 2553775.8290020856;
+    truth.y= -1988489.2912594243;
+    truth.z= 5989351.979238046;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 52 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(76.7774547648686, 21.239004530756862, -899705.0733860199);
+    geomag::Vector truth;
+    truth.x= 1172323.3400198126;
+    truth.y= 455632.6333366449;
+    truth.z= 5311284.607525046;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 53 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-67.70157800707742, 43.94895895046186, 62300.296647512354);
+    geomag::Vector truth;
+    truth.x= 1764375.7286697638;
+    truth.y= 1700802.9207764526;
+    truth.z= -5936185.745691136;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 54 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(74.3648475479095, 65.6882172977721, 982997.4207866085);
+    geomag::Vector truth;
+    truth.x= 818984.0346426424;
+    truth.y= 1812854.4746053547;
+    truth.z= 7066662.095351463;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 55 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(68.38288018657303, 116.26402829294999, -617368.588677184);
+    geomag::Vector truth;
+    truth.x= -942147.7994879311;
+    truth.y= 1909308.1238481551;
+    truth.z= 5333011.602363799;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 56 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-0.5640418200710826, 113.18591546921853, -939390.6830636378);
+    geomag::Vector truth;
+    truth.x= -2141218.2531195325;
+    truth.y= 4999230.124272813;
+    truth.z= -53119.95270054068;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 57 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-73.32776555222398, 212.04732559442553, 268076.76411229745);
+    geomag::Vector truth;
+    truth.x= -1620987.4407886476;
+    truth.y= -1014768.0438053778;
+    truth.z= -6344643.8088998385;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 58 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(83.94200718038462, 5.356686367780368, 466319.96868390637);
+    geomag::Vector truth;
+    truth.x= 721404.7324145939;
+    truth.y= 67642.63384082199;
+    truth.z= 6784732.191463642;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 59 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(23.91531397173719, 180.60657158763868, -758126.8926381168);
+    geomag::Vector truth;
+    truth.x= -5140429.495981358;
+    truth.y= -54422.07086940142;
+    truth.z= 2262377.9167762324;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 60 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(64.42926950604698, 252.86791496037213, 137228.0572439984);
+    geomag::Vector truth;
+    truth.x= -830621.3957690081;
+    truth.y= -2694606.979103606;
+    truth.z= 5854318.970290154;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 61 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(86.59785805722353, 32.52697242061573, 454159.5420435886);
+    geomag::Vector truth;
+    truth.x= 342923.3706377791;
+    truth.y= 218693.30230403808;
+    truth.z= 6798833.071884287;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 62 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-2.045933678539555, 100.97969111015185, 770660.5336195298);
+    geomag::Vector truth;
+    truth.x= -1360704.6211507155;
+    truth.y= 7013489.996548391;
+    truth.z= -253693.63997675895;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 63 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(55.39107179263178, 158.2016998128522, 283296.2424734945);
+    geomag::Vector truth;
+    truth.x= -3520627.5106016025;
+    truth.y= 1408029.384458269;
+    truth.z= 5459399.727564849;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 64 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(23.587030928024063, 3.0372206794823597, -556683.3050270004);
+    geomag::Vector truth;
+    truth.x= 5330727.303613419;
+    truth.y= 282844.1751865099;
+    truth.z= 2313680.399463751;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 65 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-50.95929897179631, 79.29684999774301, 482274.427463216);
+    geomag::Vector truth;
+    truth.x= 804044.0296380067;
+    truth.y= 4254000.827824112;
+    truth.z= -5305275.797752084;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 66 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(79.47972169879856, 95.91742776856816, 494546.6168489787);
+    geomag::Vector truth;
+    truth.x= -129758.07038419708;
+    truth.y= 1251918.5122177314;
+    truth.z= 6735429.011712957;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 67 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-89.62720618750674, 291.3682754108721, 613617.7843990221);
+    geomag::Vector truth;
+    truth.x= 16626.161765861634;
+    truth.y= -42494.20923187658;
+    truth.z= -6970221.649586832;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 68 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-80.18412000477375, 35.61706180068289, 106453.13819714519);
+    geomag::Vector truth;
+    truth.x= 901586.027916989;
+    truth.y= 645878.3743090495;
+    truth.z= -6367975.183723995;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 69 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(47.32389945407937, 263.1352451452822, 364942.0883338398);
+    geomag::Vector truth;
+    truth.x= -547269.5095289282;
+    truth.y= -4545835.925285574;
+    truth.z= 4934552.910127391;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 70 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(47.26643559114842, 215.78850934805794, -529045.254148921);
+    geomag::Vector truth;
+    truth.x= -3226045.2760494035;
+    truth.y= -2325713.8577412744;
+    truth.z= 4273322.684118847;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 71 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-84.94896747330856, 328.20330179105525, -171838.80078077142);
+    geomag::Vector truth;
+    truth.x= 466009.01229906356;
+    truth.y= -288900.65194792405;
+    truth.z= -6160730.089181673;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 72 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(40.223534484969264, 95.74231450414733, 960739.1549615301);
+    geomag::Vector truth;
+    truth.x= -561333.3300680096;
+    truth.y= 5582117.5560827805;
+    truth.z= 4717385.881993182;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 73 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-57.94379956178792, 16.890630691983738, -11768.383125463151);
+    geomag::Vector truth;
+    truth.x= 3241007.2519423803;
+    truth.y= 984114.4115384219;
+    truth.z= -5372444.0871948665;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 74 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-23.304758875415743, 236.00673224612333, -999907.7428245408);
+    geomag::Vector truth;
+    truth.x= -2763334.890764626;
+    truth.y= -4097850.9919895255;
+    truth.z= -2112166.664822068;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 75 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-64.25734946144246, 309.23131677441967, 365619.9395731485);
+    geomag::Vector truth;
+    truth.x= 1857240.655998031;
+    truth.y= -2274662.4765093904;
+    truth.z= -6051567.085496235;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 76 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-30.234004879691057, 8.933831638660585, -915594.1666869574);
+    geomag::Vector truth;
+    truth.x= 4666876.826725626;
+    truth.y= 733636.9117998828;
+    truth.z= -2731780.599785099;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 77 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-19.875147671672906, 339.4840727076501, 837224.1392981119);
+    geomag::Vector truth;
+    truth.x= 6357380.723265941;
+    truth.y= -2378941.7548613427;
+    truth.z= -2439336.0839021746;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 78 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-33.3491458524884, 133.99954531682988, -466500.51397158636);
+    geomag::Vector truth;
+    truth.x= -3434085.749036338;
+    truth.y= 3556156.368564864;
+    truth.z= -3229916.1766675087;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 79 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-64.46268820728287, 212.9466679134147, -73840.7711097853);
+    geomag::Vector truth;
+    truth.x= -2287008.0364437383;
+    truth.y= -1482175.6413584352;
+    truth.z= -5665512.199418593;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 80 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(60.359459013740945, 178.35622159644984, -964570.9534033859);
+    geomag::Vector truth;
+    truth.x= -2684218.0020904103;
+    truth.y= 77029.59212406217;
+    truth.z= 4682040.601496972;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 81 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-11.178952454683696, 48.25382864118956, -335198.06052481546);
+    geomag::Vector truth;
+    truth.x= 3947763.580073922;
+    truth.y= 4423690.392733985;
+    truth.z= -1163445.247121698;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 82 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(0.23448603170680826, 195.6127360143794, 389697.8019360248);
+    geomag::Vector truth;
+    truth.x= -6518066.176436559;
+    truth.y= -1821438.6912776416;
+    truth.z= 27522.906796096224;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 83 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(83.5552342152584, 134.96458571484095, 510695.6001263573);
+    geomag::Vector truth;
+    truth.x= -548105.1308290417;
+    truth.y= 548783.1130178208;
+    truth.z= 6823781.085615231;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 84 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(5.12635302550629, 311.26732622264103, 121697.99366664956);
+    geomag::Vector truth;
+    truth.x= 4270080.407636323;
+    truth.y= -4866124.302521838;
+    truth.z= 576975.9330523394;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 85 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-21.215258667111428, 179.98628001794359, 59475.73718163464);
+    geomag::Vector truth;
+    truth.x= -6003927.131181632;
+    truth.y= 1437.6935750296789;
+    truth.z= -2315151.6942510437;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 86 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(87.41195280962677, 22.061294913908416, -910306.2092368837);
+    geomag::Vector truth;
+    truth.x= 229716.512763755;
+    truth.y= 93097.48525106617;
+    truth.z= 5440847.162213039;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 87 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-55.02153755534166, 1.4071692856075968, -788377.649501758);
+    geomag::Vector truth;
+    truth.x= 3211708.3144409754;
+    truth.y= 78894.5752584034;
+    truth.z= -4556787.286148832;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 88 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-19.001207823800954, 73.73911340945213, -36069.2621023237);
+    geomag::Vector truth;
+    truth.x= 1679687.8158302896;
+    truth.y= 5758674.688708374;
+    truth.z= -2051732.153100745;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 89 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(62.17202605485497, 229.84855836776737, 534864.4009854551);
+    geomag::Vector truth;
+    truth.x= -2085923.2095920201;
+    truth.y= -2472604.3513667476;
+    truth.z= 6090499.436217672;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 90 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(59.498614171431825, 45.69821743188911, -911465.6367307312);
+    geomag::Vector truth;
+    truth.x= 1943565.7747515123;
+    truth.y= 1991521.8866894352;
+    truth.z= 4687002.453173238;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 91 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-9.32451774879705, 167.96000000012384, 920534.9733125179);
+    geomag::Vector truth;
+    truth.x= -7044338.594138577;
+    truth.y= 1502461.221650172;
+    truth.z= -1175747.409573102;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 92 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-43.594960042232714, 159.87987097078505, 118016.7585802211);
+    geomag::Vector truth;
+    truth.x= -4424532.300321387;
+    truth.y= 1620911.7015189987;
+    truth.z= -4456987.866926215;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 93 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(62.99798848265576, 45.11841574034372, 857002.7564883216);
+    geomag::Vector truth;
+    truth.x= 2323428.8363184836;
+    truth.y= 2333052.6076916456;
+    truth.z= 6423457.720354755;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 94 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(14.34762660782539, 166.51202787429838, -113212.52787548339);
+    geomag::Vector truth;
+    truth.x= -5903353.353981619;
+    truth.y= 1415959.117603734;
+    truth.z= 1542218.048244464;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 95 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-81.01961159385895, 99.00939417913948, 239858.37211978738);
+    geomag::Vector truth;
+    truth.x= -162282.79982050855;
+    truth.y= 1023527.1115100617;
+    truth.z= -6515232.8233342;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 96 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(75.42219192502378, 331.44568822784856, -487872.8734629838);
+    geomag::Vector truth;
+    truth.x= 1306658.409634111;
+    truth.y= -711062.2063136008;
+    truth.z= 5678628.125297803;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 97 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(6.506339288849986, 110.13269341817252, -264296.6053488554);
+    geomag::Vector truth;
+    truth.x= -2090896.5814977724;
+    truth.y= 5703557.039343893;
+    truth.z= 687971.1203858115;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 98 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-26.802512201870783, 155.81078346782542, -993475.8202882821);
+    geomag::Vector truth;
+    truth.x= -4387709.0339923855;
+    truth.y= 1970922.121872588;
+    truth.z= -2410726.6415359443;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
+TEST_CASE( "geodetic 2 ecef test 99 model", "[Geodetic]" ) {
+    geomag::Vector out = geomag::geodetic2ecef(-8.123619936805142, 113.02523763777702, -472700.8022439631);
+    geomag::Vector truth;
+    truth.x= -2286819.0146227647;
+    truth.y= 5380816.9839572655;
+    truth.z= -828519.6302899057;
+    CHECK( out.x == Approx(truth.x).margin(1.0) );
+    CHECK( out.y == Approx(truth.y).margin(1.0) );
+    CHECK( out.z == Approx(truth.z).margin(1.0) );
+}
+
+
+        
 TEST_CASE( "geomag test 0 of WMM2015 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= 1111164.8708100126;
@@ -32,12 +1332,12 @@ TEST_CASE( "geomag test 0 of WMM2015 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 1 of WMM2015 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.966461381146904e-06;
-    truth.y= 9.54841425354402e-06;
+    truth.y= 9.548414253544019e-06;
     truth.z= 3.95182e-05;
     out= geomag::GeoMag(2015.0,in,geomag::WMM2015);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -86,12 +1386,12 @@ TEST_CASE( "geomag test 3 of WMM2015 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 4 of WMM2015 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.702279657139047e-06;
-    truth.y= 9.147838085131275e-06;
+    truth.y= 9.147838085131273e-06;
     truth.z= 3.75356e-05;
     out= geomag::GeoMag(2015.0,in,geomag::WMM2015);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -140,12 +1440,12 @@ TEST_CASE( "geomag test 6 of WMM2015 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 7 of WMM2015 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.707740652342035e-06;
-    truth.y= 9.44109680628274e-06;
+    truth.y= 9.441096806282739e-06;
     truth.z= 3.9571400000000005e-05;
     out= geomag::GeoMag(2017.5,in,geomag::WMM2015);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -194,12 +1494,12 @@ TEST_CASE( "geomag test 9 of WMM2015 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 10 of WMM2015 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.463532322092838e-06;
-    truth.y= 9.044115570659571e-06;
+    truth.y= 9.04411557065957e-06;
     truth.z= 3.75855e-05;
     out= geomag::GeoMag(2017.5,in,geomag::WMM2015);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -248,12 +1548,12 @@ TEST_CASE( "geomag test 12 of WMM2015v2 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 13 of WMM2015v2 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
-    truth.x= -5.94149779500938e-06;
-    truth.y= 9.535576054014707e-06;
+    truth.x= -5.9414977950093796e-06;
+    truth.y= 9.535576054014705e-06;
     truth.z= 3.9521100000000004e-05;
     out= geomag::GeoMag(2015.0,in,geomag::WMM2015v2);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -302,12 +1602,12 @@ TEST_CASE( "geomag test 15 of WMM2015v2 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 16 of WMM2015v2 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.679611519268714e-06;
-    truth.y= 9.135175718626881e-06;
+    truth.y= 9.13517571862688e-06;
     truth.z= 3.75381e-05;
     out= geomag::GeoMag(2015.0,in,geomag::WMM2015v2);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -356,7 +1656,7 @@ TEST_CASE( "geomag test 18 of WMM2015v2 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 19 of WMM2015v2 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
@@ -410,12 +1710,12 @@ TEST_CASE( "geomag test 21 of WMM2015v2 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 22 of WMM2015v2 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.50437218767199e-06;
-    truth.y= 9.062452292816946e-06;
+    truth.y= 9.062452292816944e-06;
     truth.z= 3.7584400000000006e-05;
     out= geomag::GeoMag(2017.5,in,geomag::WMM2015v2);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -464,12 +1764,12 @@ TEST_CASE( "geomag test 24 of WMM2020 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 25 of WMM2020 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.561426191875908e-06;
-    truth.y= 9.412872726873378e-06;
+    truth.y= 9.412872726873376e-06;
     truth.z= 3.9624300000000006e-05;
     out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -518,12 +1818,12 @@ TEST_CASE( "geomag test 27 of WMM2020 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 28 of WMM2020 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.328246064856985e-06;
-    truth.y= 9.01899289956124e-06;
+    truth.y= 9.018992899561239e-06;
     truth.z= 3.76367e-05;
     out= geomag::GeoMag(2020.0,in,geomag::WMM2020);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -572,12 +1872,12 @@ TEST_CASE( "geomag test 30 of WMM2020 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 31 of WMM2020 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3189068.4999999986;
-    in.y= 5523628.670817469;
+    in.y= 5523628.670817468;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.368203727960294e-06;
-    truth.y= 9.382401602207892e-06;
+    truth.y= 9.38240160220789e-06;
     truth.z= 3.9684699999999996e-05;
     out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
@@ -626,12 +1926,12 @@ TEST_CASE( "geomag test 33 of WMM2020 model", "[GeoMag]" ) {
 TEST_CASE( "geomag test 34 of WMM2020 model", "[GeoMag]" ) {
     geomag::Vector in;
     in.x= -3239068.4999999986;
-    in.y= 5610231.211195913;
+    in.y= 5610231.211195912;
     in.z= 0.0;
     geomag::Vector out;
     geomag::Vector truth;
     truth.x= -5.150429303246407e-06;
-    truth.y= 8.991405234014355e-06;
+    truth.y= 8.991405234014353e-06;
     truth.z= 3.7694e-05;
     out= geomag::GeoMag(2022.5,in,geomag::WMM2020);
     CHECK( out.x*1E9 == Approx(truth.x*1E9).margin(0.1) );
