@@ -25,7 +25,7 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 ## Using XYZgeomag
 
-Just download [geomag.hpp](https://github.com/nhz2/XYZgeomag/releases/download/v1.0.0/geomag.hpp) and include it.
+Just download [geomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/geomag.hpp) and include it.
 Here is an example Arduino sketch:
 
 ~~~cpp
@@ -49,13 +49,46 @@ void loop() {
   out=geomag::GeoMag(2022.5,in,geomag::WMM2020);
   int endtime=micros();
   int endtimemil=millis();
-  Serial.println(out.x*1E9);
-  Serial.println(out.y*1E9);
-  Serial.println(out.z*1E9);
+  Serial.print(out.x*1E9);
+  Serial.println(" nT x");
+  Serial.print(out.y*1E9);
+  Serial.println(" nT y");
+  Serial.print(out.z*1E9);
+  Serial.println(" nT z");
   Serial.print("time in micro seconds: ");
   Serial.println(endtime-starttime);
   Serial.print("time in milli seconds: ");
   Serial.println(endtimemil-starttimemil);
+  delay(2000);
+}
+~~~
+
+If you have a position in latitude, longitude, and height, 
+you can convert it to geocentric cartesian coordinates 
+with `geodetic2ecef`. Note that `geodetic2ecef` uses 
+single precision floats, so it will only be accurate to about 1 meter:
+~~~cpp
+#include "geomag.hpp"
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(1,INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int val= digitalRead(1);
+  float lat = val + 43.0f; // latitude in degrees
+  float lon = val + 75.0f; // longitude in degrees
+  float height = val + 305; // height above WGS84 ellipsoid in meters
+  geomag::Vector in = geomag::geodetic2ecef(lat,lon,height);
+  geomag::Vector out = geomag::GeoMag(2022.5,in,geomag::WMM2020);
+  Serial.print(out.x*1E9);
+  Serial.println(" nT x");
+  Serial.print(out.y*1E9);
+  Serial.println(" nT y");
+  Serial.print(out.z*1E9);
+  Serial.println(" nT z");
   delay(2000);
 }
 ~~~
