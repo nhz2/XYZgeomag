@@ -86,7 +86,7 @@ Using the WGS 84 ellipsoid and the algorithm from https://geographiclib.sourcefo
  INPUT:
     lat: Geodetic latitude in degrees, -90 at the south pole, 90 at the north pole.
     lon: Geodetic longitude in degrees.
-    h: Height above the WGS 84 ellipsoid.
+    h: Height above the WGS 84 ellipsoid in meters.
 **/
 inline Vector geodetic2ecef(float lat, float lon, float h){
     // Convert to radians
