@@ -122,6 +122,8 @@ Using spherical harmonics algorithm, described in sections 3.2.4 and 3.2.5:
 
   Satellite Orbits Models, Methods and Applications,
     by Oliver Montenbruck and Eberhard Gill 2000
+    
+Using geodetic2ecef algorithm from https://geographiclib.sourceforge.io/
 
 Using coefficients and test points from:
 
