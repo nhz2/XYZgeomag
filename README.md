@@ -86,21 +86,22 @@ void loop() {
   float height = val + 305; // height above WGS84 ellipsoid in meters
   geomag::Vector position = geomag::geodetic2ecef(lat,lon,height);
   geomag::Vector mag_field = geomag::GeoMag(2022.5,position,geomag::WMM2020);
-  geomag::Elements out = geomag::magField2Elements(mag_field, lat, lon)
+  geomag::Elements out = geomag::magField2Elements(mag_field, lat, lon);
   Serial.print(out.north);
   Serial.println(" nT north");
   Serial.print(out.east);
   Serial.println(" nT east");
   Serial.print(out.down);
   Serial.println(" nT down");
-  Serial.print(out.horizontal_intensity);
-  Serial.println(" nT horizontal intensity");
-  Serial.print(out.total_intensity);
-  Serial.println(" nT total intensity");
+  Serial.print(out.horizontal);
+  Serial.println(" nT horizontal");
+  Serial.print(out.total);
+  Serial.println(" nT total");
   Serial.print(out.inclination);
   Serial.println(" deg inclination");
   Serial.print(out.declination);
   Serial.println(" deg declination");
+  Serial.println();
   delay(2000);
 }
 ~~~

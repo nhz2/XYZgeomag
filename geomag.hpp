@@ -85,8 +85,8 @@ typedef struct {
     float north;// local north magnetic field (nT)
     float east;// local east magnetic field (nT)
     float down;// local down magnetic field (nT)
-    float horizontal_intensity;// (nT)
-    float total_intensity;// (nT)
+    float horizontal;// local horizontal magnetic field intensity (nT)
+    float total;// local total magnetic field intensity (nT)
     float inclination;// also called the dip angle, 
     // the angle measured from the horizontal plane to the 
     // magnetic field vector; a downward field is positive (deg)
@@ -117,11 +117,11 @@ inline Elements magField2Elements(Vector mag_field_itrs, float lat, float lon){
     float north = -sphi*x1 + cphi*z;
     float east = -slam*x + clam*y;
     float down = -cphi*x1 + -sphi*z;
-    float horizontal_intensity = sqrtf(north*north + east*east);
-    float full_intensity = sqrtf(horizontal_intensity*horizontal_intensity + down*down);
-    float inclination = atan2f(down, horizontal_intensity)*((float)(180.0/M_PI));
+    float horizontal = sqrtf(north*north + east*east);
+    float total = sqrtf(horizontal*horizontal + down*down);
+    float inclination = atan2f(down, horizontal)*((float)(180.0/M_PI));
     float declination = atan2f(east, north)*((float)(180.0/M_PI));
-    return {north, east, down, horizontal_intensity, full_intensity, inclination, declination};
+    return {north, east, down, horizontal, total, inclination, declination};
 }
 
 

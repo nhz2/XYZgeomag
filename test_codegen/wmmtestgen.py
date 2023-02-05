@@ -48,8 +48,8 @@ def add_full_tests(
         norths, #(numpy array): test X(local north) magnetic field (nT)
         easts, #(numpy array): test Y(local east) magnetic field (nT)
         downs, #(numpy array): test Z(local down) magnetic field (nT)
-        horizontal_intensities, #(numpy array): test H (nT)
-        total_intensities, #(numpy array): test F(nT)
+        horizontal, #(numpy array): test H (nT)
+        total, #(numpy array): test F(nT)
         inclinations, #(numpy array): test I, the angle measured from the horizontal plane to the magnetic field vector; downward  field is positive (deg)
         declinations, #(numpy array): test D, the angle between true north and the horizontal component of the field, positive eastward of true North (deg)
         margin_nT, #(float or int): Acceptable error in each field component (nT)
@@ -68,13 +68,13 @@ TEST_CASE( "full geomag test {i} of {modelnames[i]} model", "[Full GeoMag]" ) {{
         {lats[i]!r},
         {lons[i]!r}
     );
-    CHECK( out.north                == Approx({norths[i]!r}).margin({margin_nT!r}) );
-    CHECK( out.east                 == Approx({easts[i]!r}).margin({margin_nT!r}) );
-    CHECK( out.down                 == Approx({downs[i]!r}).margin({margin_nT!r}) );
-    CHECK( out.horizontal_intensity == Approx({horizontal_intensities[i]!r}).margin({margin_nT!r}) );
-    CHECK( out.total_intensity      == Approx({total_intensities[i]!r}).margin({margin_nT!r}) );
-    CHECK( out.inclination          == Approx({inclinations[i]!r}).margin({margin_deg!r}) );
-    CHECK( out.declination          == Approx({declinations[i]!r}).margin({margin_deg!r}) );
+    CHECK( out.north       == Approx({norths[i]!r}).margin({margin_nT!r}) );
+    CHECK( out.east        == Approx({easts[i]!r}).margin({margin_nT!r}) );
+    CHECK( out.down        == Approx({downs[i]!r}).margin({margin_nT!r}) );
+    CHECK( out.horizontal  == Approx({horizontal[i]!r}).margin({margin_nT!r}) );
+    CHECK( out.total       == Approx({total[i]!r}).margin({margin_nT!r}) );
+    CHECK( out.inclination == Approx({inclinations[i]!r}).margin({margin_deg!r}) );
+    CHECK( out.declination == Approx({declinations[i]!r}).margin({margin_deg!r}) );
 }}
 
 

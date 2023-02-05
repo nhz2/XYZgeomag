@@ -1969,13 +1969,13 @@ TEST_CASE( "full geomag test 0 of WMM2015 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6627.1).margin(0.1) );
-    CHECK( out.east                 == Approx(-445.9).margin(0.1) );
-    CHECK( out.down                 == Approx(54432.3).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6642.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(54836.0).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.04).margin(0.01) );
-    CHECK( out.declination          == Approx(-3.85).margin(0.01) );
+    CHECK( out.north       == Approx(6627.1).margin(0.1) );
+    CHECK( out.east        == Approx(-445.9).margin(0.1) );
+    CHECK( out.down        == Approx(54432.3).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6642.1).margin(0.1) );
+    CHECK( out.total       == Approx(54836.0).margin(0.1) );
+    CHECK( out.inclination == Approx(83.04).margin(0.01) );
+    CHECK( out.declination == Approx(-3.85).margin(0.01) );
 }
 
 
@@ -1990,13 +1990,13 @@ TEST_CASE( "full geomag test 1 of WMM2015 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39518.2).margin(0.1) );
-    CHECK( out.east                 == Approx(392.9).margin(0.1) );
-    CHECK( out.down                 == Approx(-11252.4).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39520.2).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41090.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.89).margin(0.01) );
-    CHECK( out.declination          == Approx(0.57).margin(0.01) );
+    CHECK( out.north       == Approx(39518.2).margin(0.1) );
+    CHECK( out.east        == Approx(392.9).margin(0.1) );
+    CHECK( out.down        == Approx(-11252.4).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39520.2).margin(0.1) );
+    CHECK( out.total       == Approx(41090.9).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.89).margin(0.01) );
+    CHECK( out.declination == Approx(0.57).margin(0.01) );
 }
 
 
@@ -2011,13 +2011,13 @@ TEST_CASE( "full geomag test 2 of WMM2015 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5797.3).margin(0.1) );
-    CHECK( out.east                 == Approx(15761.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-52919.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16793.5).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55519.8).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.39).margin(0.01) );
-    CHECK( out.declination          == Approx(69.81).margin(0.01) );
+    CHECK( out.north       == Approx(5797.3).margin(0.1) );
+    CHECK( out.east        == Approx(15761.1).margin(0.1) );
+    CHECK( out.down        == Approx(-52919.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16793.5).margin(0.1) );
+    CHECK( out.total       == Approx(55519.8).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.39).margin(0.01) );
+    CHECK( out.declination == Approx(69.81).margin(0.01) );
 }
 
 
@@ -2032,13 +2032,13 @@ TEST_CASE( "full geomag test 3 of WMM2015 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6314.3).margin(0.1) );
-    CHECK( out.east                 == Approx(-471.6).margin(0.1) );
-    CHECK( out.down                 == Approx(52269.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6331.9).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52652.0).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.09).margin(0.01) );
-    CHECK( out.declination          == Approx(-4.27).margin(0.01) );
+    CHECK( out.north       == Approx(6314.3).margin(0.1) );
+    CHECK( out.east        == Approx(-471.6).margin(0.1) );
+    CHECK( out.down        == Approx(52269.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6331.9).margin(0.1) );
+    CHECK( out.total       == Approx(52652.0).margin(0.1) );
+    CHECK( out.inclination == Approx(83.09).margin(0.01) );
+    CHECK( out.declination == Approx(-4.27).margin(0.01) );
 }
 
 
@@ -2053,13 +2053,13 @@ TEST_CASE( "full geomag test 4 of WMM2015 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37535.6).margin(0.1) );
-    CHECK( out.east                 == Approx(364.4).margin(0.1) );
-    CHECK( out.down                 == Approx(-10773.4).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37537.3).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39052.7).margin(0.1) );
-    CHECK( out.inclination          == Approx(-16.01).margin(0.01) );
-    CHECK( out.declination          == Approx(0.56).margin(0.01) );
+    CHECK( out.north       == Approx(37535.6).margin(0.1) );
+    CHECK( out.east        == Approx(364.4).margin(0.1) );
+    CHECK( out.down        == Approx(-10773.4).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37537.3).margin(0.1) );
+    CHECK( out.total       == Approx(39052.7).margin(0.1) );
+    CHECK( out.inclination == Approx(-16.01).margin(0.01) );
+    CHECK( out.declination == Approx(0.56).margin(0.01) );
 }
 
 
@@ -2074,13 +2074,13 @@ TEST_CASE( "full geomag test 5 of WMM2015 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5613.1).margin(0.1) );
-    CHECK( out.east                 == Approx(14791.5).margin(0.1) );
-    CHECK( out.down                 == Approx(-50378.6).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15820.7).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52804.4).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.57).margin(0.01) );
-    CHECK( out.declination          == Approx(69.22).margin(0.01) );
+    CHECK( out.north       == Approx(5613.1).margin(0.1) );
+    CHECK( out.east        == Approx(14791.5).margin(0.1) );
+    CHECK( out.down        == Approx(-50378.6).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15820.7).margin(0.1) );
+    CHECK( out.total       == Approx(52804.4).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.57).margin(0.01) );
+    CHECK( out.declination == Approx(69.22).margin(0.01) );
 }
 
 
@@ -2095,13 +2095,13 @@ TEST_CASE( "full geomag test 6 of WMM2015 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6599.4).margin(0.1) );
-    CHECK( out.east                 == Approx(-317.1).margin(0.1) );
-    CHECK( out.down                 == Approx(54459.2).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6607.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(54858.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.08).margin(0.01) );
-    CHECK( out.declination          == Approx(-2.75).margin(0.01) );
+    CHECK( out.north       == Approx(6599.4).margin(0.1) );
+    CHECK( out.east        == Approx(-317.1).margin(0.1) );
+    CHECK( out.down        == Approx(54459.2).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6607.0).margin(0.1) );
+    CHECK( out.total       == Approx(54858.5).margin(0.1) );
+    CHECK( out.inclination == Approx(83.08).margin(0.01) );
+    CHECK( out.declination == Approx(-2.75).margin(0.01) );
 }
 
 
@@ -2116,13 +2116,13 @@ TEST_CASE( "full geomag test 7 of WMM2015 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39571.4).margin(0.1) );
-    CHECK( out.east                 == Approx(222.5).margin(0.1) );
-    CHECK( out.down                 == Approx(-11030.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39572.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41080.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.57).margin(0.01) );
-    CHECK( out.declination          == Approx(0.32).margin(0.01) );
+    CHECK( out.north       == Approx(39571.4).margin(0.1) );
+    CHECK( out.east        == Approx(222.5).margin(0.1) );
+    CHECK( out.down        == Approx(-11030.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39572.0).margin(0.1) );
+    CHECK( out.total       == Approx(41080.5).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.57).margin(0.01) );
+    CHECK( out.declination == Approx(0.32).margin(0.01) );
 }
 
 
@@ -2137,13 +2137,13 @@ TEST_CASE( "full geomag test 8 of WMM2015 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5873.8).margin(0.1) );
-    CHECK( out.east                 == Approx(15781.4).margin(0.1) );
-    CHECK( out.down                 == Approx(-52687.9).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16839.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55313.4).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.28).margin(0.01) );
-    CHECK( out.declination          == Approx(69.58).margin(0.01) );
+    CHECK( out.north       == Approx(5873.8).margin(0.1) );
+    CHECK( out.east        == Approx(15781.4).margin(0.1) );
+    CHECK( out.down        == Approx(-52687.9).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16839.1).margin(0.1) );
+    CHECK( out.total       == Approx(55313.4).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.28).margin(0.01) );
+    CHECK( out.declination == Approx(69.58).margin(0.01) );
 }
 
 
@@ -2158,13 +2158,13 @@ TEST_CASE( "full geomag test 9 of WMM2015 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6290.5).margin(0.1) );
-    CHECK( out.east                 == Approx(-348.5).margin(0.1) );
-    CHECK( out.down                 == Approx(52292.7).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6300.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52670.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.13).margin(0.01) );
-    CHECK( out.declination          == Approx(-3.17).margin(0.01) );
+    CHECK( out.north       == Approx(6290.5).margin(0.1) );
+    CHECK( out.east        == Approx(-348.5).margin(0.1) );
+    CHECK( out.down        == Approx(52292.7).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6300.1).margin(0.1) );
+    CHECK( out.total       == Approx(52670.9).margin(0.1) );
+    CHECK( out.inclination == Approx(83.13).margin(0.01) );
+    CHECK( out.declination == Approx(-3.17).margin(0.01) );
 }
 
 
@@ -2179,13 +2179,13 @@ TEST_CASE( "full geomag test 10 of WMM2015 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37585.5).margin(0.1) );
-    CHECK( out.east                 == Approx(209.5).margin(0.1) );
-    CHECK( out.down                 == Approx(-10564.2).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37586.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39042.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.7).margin(0.01) );
-    CHECK( out.declination          == Approx(0.32).margin(0.01) );
+    CHECK( out.north       == Approx(37585.5).margin(0.1) );
+    CHECK( out.east        == Approx(209.5).margin(0.1) );
+    CHECK( out.down        == Approx(-10564.2).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37586.1).margin(0.1) );
+    CHECK( out.total       == Approx(39042.5).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.7).margin(0.01) );
+    CHECK( out.declination == Approx(0.32).margin(0.01) );
 }
 
 
@@ -2200,13 +2200,13 @@ TEST_CASE( "full geomag test 11 of WMM2015 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5683.5).margin(0.1) );
-    CHECK( out.east                 == Approx(14808.8).margin(0.1) );
-    CHECK( out.down                 == Approx(-50163.0).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15862.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52611.1).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.45).margin(0.01) );
-    CHECK( out.declination          == Approx(69.0).margin(0.01) );
+    CHECK( out.north       == Approx(5683.5).margin(0.1) );
+    CHECK( out.east        == Approx(14808.8).margin(0.1) );
+    CHECK( out.down        == Approx(-50163.0).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15862.0).margin(0.1) );
+    CHECK( out.total       == Approx(52611.1).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.45).margin(0.01) );
+    CHECK( out.declination == Approx(69.0).margin(0.01) );
 }
 
 
@@ -2221,13 +2221,13 @@ TEST_CASE( "full geomag test 12 of WMM2015v2 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6636.6).margin(0.1) );
-    CHECK( out.east                 == Approx(-451.9).margin(0.1) );
-    CHECK( out.down                 == Approx(54408.9).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6651.9).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(54814.0).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.03).margin(0.01) );
-    CHECK( out.declination          == Approx(-3.9).margin(0.01) );
+    CHECK( out.north       == Approx(6636.6).margin(0.1) );
+    CHECK( out.east        == Approx(-451.9).margin(0.1) );
+    CHECK( out.down        == Approx(54408.9).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6651.9).margin(0.1) );
+    CHECK( out.total       == Approx(54814.0).margin(0.1) );
+    CHECK( out.inclination == Approx(83.03).margin(0.01) );
+    CHECK( out.declination == Approx(-3.9).margin(0.01) );
 }
 
 
@@ -2242,13 +2242,13 @@ TEST_CASE( "full geomag test 13 of WMM2015v2 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39521.1).margin(0.1) );
-    CHECK( out.east                 == Approx(377.7).margin(0.1) );
-    CHECK( out.down                 == Approx(-11228.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39522.9).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41087.1).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.86).margin(0.01) );
-    CHECK( out.declination          == Approx(0.55).margin(0.01) );
+    CHECK( out.north       == Approx(39521.1).margin(0.1) );
+    CHECK( out.east        == Approx(377.7).margin(0.1) );
+    CHECK( out.down        == Approx(-11228.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39522.9).margin(0.1) );
+    CHECK( out.total       == Approx(41087.1).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.86).margin(0.01) );
+    CHECK( out.declination == Approx(0.55).margin(0.01) );
 }
 
 
@@ -2263,13 +2263,13 @@ TEST_CASE( "full geomag test 14 of WMM2015v2 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5796.3).margin(0.1) );
-    CHECK( out.east                 == Approx(15759.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-52927.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16791.2).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55526.8).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.4).margin(0.01) );
-    CHECK( out.declination          == Approx(69.81).margin(0.01) );
+    CHECK( out.north       == Approx(5796.3).margin(0.1) );
+    CHECK( out.east        == Approx(15759.1).margin(0.1) );
+    CHECK( out.down        == Approx(-52927.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16791.2).margin(0.1) );
+    CHECK( out.total       == Approx(55526.8).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.4).margin(0.01) );
+    CHECK( out.declination == Approx(69.81).margin(0.01) );
 }
 
 
@@ -2284,13 +2284,13 @@ TEST_CASE( "full geomag test 15 of WMM2015v2 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6323.4).margin(0.1) );
-    CHECK( out.east                 == Approx(-477.6).margin(0.1) );
-    CHECK( out.down                 == Approx(52249.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6341.4).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52632.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.08).margin(0.01) );
-    CHECK( out.declination          == Approx(-4.32).margin(0.01) );
+    CHECK( out.north       == Approx(6323.4).margin(0.1) );
+    CHECK( out.east        == Approx(-477.6).margin(0.1) );
+    CHECK( out.down        == Approx(52249.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6341.4).margin(0.1) );
+    CHECK( out.total       == Approx(52632.5).margin(0.1) );
+    CHECK( out.inclination == Approx(83.08).margin(0.01) );
+    CHECK( out.declination == Approx(-4.32).margin(0.01) );
 }
 
 
@@ -2305,13 +2305,13 @@ TEST_CASE( "full geomag test 16 of WMM2015v2 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37538.1).margin(0.1) );
-    CHECK( out.east                 == Approx(351.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-10751.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37539.7).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39048.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.98).margin(0.01) );
-    CHECK( out.declination          == Approx(0.54).margin(0.01) );
+    CHECK( out.north       == Approx(37538.1).margin(0.1) );
+    CHECK( out.east        == Approx(351.1).margin(0.1) );
+    CHECK( out.down        == Approx(-10751.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37539.7).margin(0.1) );
+    CHECK( out.total       == Approx(39048.9).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.98).margin(0.01) );
+    CHECK( out.declination == Approx(0.54).margin(0.01) );
 }
 
 
@@ -2326,13 +2326,13 @@ TEST_CASE( "full geomag test 17 of WMM2015v2 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5612.2).margin(0.1) );
-    CHECK( out.east                 == Approx(14789.3).margin(0.1) );
-    CHECK( out.down                 == Approx(-50385.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15818.3).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52810.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.57).margin(0.01) );
-    CHECK( out.declination          == Approx(69.22).margin(0.01) );
+    CHECK( out.north       == Approx(5612.2).margin(0.1) );
+    CHECK( out.east        == Approx(14789.3).margin(0.1) );
+    CHECK( out.down        == Approx(-50385.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15818.3).margin(0.1) );
+    CHECK( out.total       == Approx(52810.5).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.57).margin(0.01) );
+    CHECK( out.declination == Approx(69.22).margin(0.01) );
 }
 
 
@@ -2347,13 +2347,13 @@ TEST_CASE( "full geomag test 18 of WMM2015v2 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6605.2).margin(0.1) );
-    CHECK( out.east                 == Approx(-298.7).margin(0.1) );
-    CHECK( out.down                 == Approx(54506.3).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6612.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(54905.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.08).margin(0.01) );
-    CHECK( out.declination          == Approx(-2.59).margin(0.01) );
+    CHECK( out.north       == Approx(6605.2).margin(0.1) );
+    CHECK( out.east        == Approx(-298.7).margin(0.1) );
+    CHECK( out.down        == Approx(54506.3).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6612.0).margin(0.1) );
+    CHECK( out.total       == Approx(54905.9).margin(0.1) );
+    CHECK( out.inclination == Approx(83.08).margin(0.01) );
+    CHECK( out.declination == Approx(-2.59).margin(0.01) );
 }
 
 
@@ -2368,13 +2368,13 @@ TEST_CASE( "full geomag test 19 of WMM2015v2 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39569.4).margin(0.1) );
-    CHECK( out.east                 == Approx(252.3).margin(0.1) );
-    CHECK( out.down                 == Approx(-11067.9).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39570.2).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41088.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.63).margin(0.01) );
-    CHECK( out.declination          == Approx(0.37).margin(0.01) );
+    CHECK( out.north       == Approx(39569.4).margin(0.1) );
+    CHECK( out.east        == Approx(252.3).margin(0.1) );
+    CHECK( out.down        == Approx(-11067.9).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39570.2).margin(0.1) );
+    CHECK( out.total       == Approx(41088.9).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.63).margin(0.01) );
+    CHECK( out.declination == Approx(0.37).margin(0.01) );
 }
 
 
@@ -2389,13 +2389,13 @@ TEST_CASE( "full geomag test 20 of WMM2015v2 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5864.6).margin(0.1) );
-    CHECK( out.east                 == Approx(15764.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-52706.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16819.7).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55324.8).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.3).margin(0.01) );
-    CHECK( out.declination          == Approx(69.59).margin(0.01) );
+    CHECK( out.north       == Approx(5864.6).margin(0.1) );
+    CHECK( out.east        == Approx(15764.1).margin(0.1) );
+    CHECK( out.down        == Approx(-52706.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16819.7).margin(0.1) );
+    CHECK( out.total       == Approx(55324.8).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.3).margin(0.01) );
+    CHECK( out.declination == Approx(69.59).margin(0.01) );
 }
 
 
@@ -2410,13 +2410,13 @@ TEST_CASE( "full geomag test 21 of WMM2015v2 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6294.3).margin(0.1) );
-    CHECK( out.east                 == Approx(-331.1).margin(0.1) );
-    CHECK( out.down                 == Approx(52337.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6303.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52716.0).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.13).margin(0.01) );
-    CHECK( out.declination          == Approx(-3.01).margin(0.01) );
+    CHECK( out.north       == Approx(6294.3).margin(0.1) );
+    CHECK( out.east        == Approx(-331.1).margin(0.1) );
+    CHECK( out.down        == Approx(52337.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6303.0).margin(0.1) );
+    CHECK( out.total       == Approx(52716.0).margin(0.1) );
+    CHECK( out.inclination == Approx(83.13).margin(0.01) );
+    CHECK( out.declination == Approx(-3.01).margin(0.01) );
 }
 
 
@@ -2431,13 +2431,13 @@ TEST_CASE( "full geomag test 22 of WMM2015v2 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37584.4).margin(0.1) );
-    CHECK( out.east                 == Approx(235.7).margin(0.1) );
-    CHECK( out.down                 == Approx(-10600.5).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37585.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39051.4).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.75).margin(0.01) );
-    CHECK( out.declination          == Approx(0.36).margin(0.01) );
+    CHECK( out.north       == Approx(37584.4).margin(0.1) );
+    CHECK( out.east        == Approx(235.7).margin(0.1) );
+    CHECK( out.down        == Approx(-10600.5).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37585.1).margin(0.1) );
+    CHECK( out.total       == Approx(39051.4).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.75).margin(0.01) );
+    CHECK( out.declination == Approx(0.36).margin(0.01) );
 }
 
 
@@ -2452,13 +2452,13 @@ TEST_CASE( "full geomag test 23 of WMM2015v2 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5674.9).margin(0.1) );
-    CHECK( out.east                 == Approx(14793.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-50179.5).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15844.2).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52621.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.48).margin(0.01) );
-    CHECK( out.declination          == Approx(69.01).margin(0.01) );
+    CHECK( out.north       == Approx(5674.9).margin(0.1) );
+    CHECK( out.east        == Approx(14793.1).margin(0.1) );
+    CHECK( out.down        == Approx(-50179.5).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15844.2).margin(0.1) );
+    CHECK( out.total       == Approx(52621.5).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.48).margin(0.01) );
+    CHECK( out.declination == Approx(69.01).margin(0.01) );
 }
 
 
@@ -2473,13 +2473,13 @@ TEST_CASE( "full geomag test 24 of WMM2020 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6570.4).margin(0.1) );
-    CHECK( out.east                 == Approx(-146.3).margin(0.1) );
-    CHECK( out.down                 == Approx(54606.0).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6572.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55000.1).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.14).margin(0.01) );
-    CHECK( out.declination          == Approx(-1.28).margin(0.01) );
+    CHECK( out.north       == Approx(6570.4).margin(0.1) );
+    CHECK( out.east        == Approx(-146.3).margin(0.1) );
+    CHECK( out.down        == Approx(54606.0).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6572.0).margin(0.1) );
+    CHECK( out.total       == Approx(55000.1).margin(0.1) );
+    CHECK( out.inclination == Approx(83.14).margin(0.01) );
+    CHECK( out.declination == Approx(-1.28).margin(0.01) );
 }
 
 
@@ -2494,13 +2494,13 @@ TEST_CASE( "full geomag test 25 of WMM2020 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39624.3).margin(0.1) );
-    CHECK( out.east                 == Approx(109.9).margin(0.1) );
-    CHECK( out.down                 == Approx(-10932.5).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39624.4).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41104.9).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.42).margin(0.01) );
-    CHECK( out.declination          == Approx(0.16).margin(0.01) );
+    CHECK( out.north       == Approx(39624.3).margin(0.1) );
+    CHECK( out.east        == Approx(109.9).margin(0.1) );
+    CHECK( out.down        == Approx(-10932.5).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39624.4).margin(0.1) );
+    CHECK( out.total       == Approx(41104.9).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.42).margin(0.01) );
+    CHECK( out.declination == Approx(0.16).margin(0.01) );
 }
 
 
@@ -2515,13 +2515,13 @@ TEST_CASE( "full geomag test 26 of WMM2020 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5940.6).margin(0.1) );
-    CHECK( out.east                 == Approx(15772.1).margin(0.1) );
-    CHECK( out.down                 == Approx(-52480.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16853.8).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55120.6).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.2).margin(0.01) );
-    CHECK( out.declination          == Approx(69.36).margin(0.01) );
+    CHECK( out.north       == Approx(5940.6).margin(0.1) );
+    CHECK( out.east        == Approx(15772.1).margin(0.1) );
+    CHECK( out.down        == Approx(-52480.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16853.8).margin(0.1) );
+    CHECK( out.total       == Approx(55120.6).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.2).margin(0.01) );
+    CHECK( out.declination == Approx(69.36).margin(0.01) );
 }
 
 
@@ -2536,13 +2536,13 @@ TEST_CASE( "full geomag test 27 of WMM2020 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6261.8).margin(0.1) );
-    CHECK( out.east                 == Approx(-185.5).margin(0.1) );
-    CHECK( out.down                 == Approx(52429.1).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6264.5).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52802.0).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.19).margin(0.01) );
-    CHECK( out.declination          == Approx(-1.7).margin(0.01) );
+    CHECK( out.north       == Approx(6261.8).margin(0.1) );
+    CHECK( out.east        == Approx(-185.5).margin(0.1) );
+    CHECK( out.down        == Approx(52429.1).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6264.5).margin(0.1) );
+    CHECK( out.total       == Approx(52802.0).margin(0.1) );
+    CHECK( out.inclination == Approx(83.19).margin(0.01) );
+    CHECK( out.declination == Approx(-1.7).margin(0.01) );
 }
 
 
@@ -2557,13 +2557,13 @@ TEST_CASE( "full geomag test 28 of WMM2020 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37636.7).margin(0.1) );
-    CHECK( out.east                 == Approx(104.9).margin(0.1) );
-    CHECK( out.down                 == Approx(-10474.8).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37636.9).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39067.3).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.55).margin(0.01) );
-    CHECK( out.declination          == Approx(0.16).margin(0.01) );
+    CHECK( out.north       == Approx(37636.7).margin(0.1) );
+    CHECK( out.east        == Approx(104.9).margin(0.1) );
+    CHECK( out.down        == Approx(-10474.8).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37636.9).margin(0.1) );
+    CHECK( out.total       == Approx(39067.3).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.55).margin(0.01) );
+    CHECK( out.declination == Approx(0.16).margin(0.01) );
 }
 
 
@@ -2578,13 +2578,13 @@ TEST_CASE( "full geomag test 29 of WMM2020 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5744.9).margin(0.1) );
-    CHECK( out.east                 == Approx(14799.5).margin(0.1) );
-    CHECK( out.down                 == Approx(-49969.4).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15875.4).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52430.6).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.37).margin(0.01) );
-    CHECK( out.declination          == Approx(68.78).margin(0.01) );
+    CHECK( out.north       == Approx(5744.9).margin(0.1) );
+    CHECK( out.east        == Approx(14799.5).margin(0.1) );
+    CHECK( out.down        == Approx(-49969.4).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15875.4).margin(0.1) );
+    CHECK( out.total       == Approx(52430.6).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.37).margin(0.01) );
+    CHECK( out.declination == Approx(68.78).margin(0.01) );
 }
 
 
@@ -2599,13 +2599,13 @@ TEST_CASE( "full geomag test 30 of WMM2020 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6529.9).margin(0.1) );
-    CHECK( out.east                 == Approx(1.1).margin(0.1) );
-    CHECK( out.down                 == Approx(54713.4).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6529.9).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(55101.7).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.19).margin(0.01) );
-    CHECK( out.declination          == Approx(0.01).margin(0.01) );
+    CHECK( out.north       == Approx(6529.9).margin(0.1) );
+    CHECK( out.east        == Approx(1.1).margin(0.1) );
+    CHECK( out.down        == Approx(54713.4).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6529.9).margin(0.1) );
+    CHECK( out.total       == Approx(55101.7).margin(0.1) );
+    CHECK( out.inclination == Approx(83.19).margin(0.01) );
+    CHECK( out.declination == Approx(0.01).margin(0.01) );
 }
 
 
@@ -2620,13 +2620,13 @@ TEST_CASE( "full geomag test 31 of WMM2020 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(39684.7).margin(0.1) );
-    CHECK( out.east                 == Approx(-42.2).margin(0.1) );
-    CHECK( out.down                 == Approx(-10809.5).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(39684.7).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(41130.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.24).margin(0.01) );
-    CHECK( out.declination          == Approx(-0.06).margin(0.01) );
+    CHECK( out.north       == Approx(39684.7).margin(0.1) );
+    CHECK( out.east        == Approx(-42.2).margin(0.1) );
+    CHECK( out.down        == Approx(-10809.5).margin(0.1) );
+    CHECK( out.horizontal  == Approx(39684.7).margin(0.1) );
+    CHECK( out.total       == Approx(41130.5).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.24).margin(0.01) );
+    CHECK( out.declination == Approx(-0.06).margin(0.01) );
 }
 
 
@@ -2641,13 +2641,13 @@ TEST_CASE( "full geomag test 32 of WMM2020 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(6016.5).margin(0.1) );
-    CHECK( out.east                 == Approx(15776.7).margin(0.1) );
-    CHECK( out.down                 == Approx(-52251.6).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(16885.0).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(54912.1).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.09).margin(0.01) );
-    CHECK( out.declination          == Approx(69.13).margin(0.01) );
+    CHECK( out.north       == Approx(6016.5).margin(0.1) );
+    CHECK( out.east        == Approx(15776.7).margin(0.1) );
+    CHECK( out.down        == Approx(-52251.6).margin(0.1) );
+    CHECK( out.horizontal  == Approx(16885.0).margin(0.1) );
+    CHECK( out.total       == Approx(54912.1).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.09).margin(0.01) );
+    CHECK( out.declination == Approx(69.13).margin(0.01) );
 }
 
 
@@ -2662,13 +2662,13 @@ TEST_CASE( "full geomag test 33 of WMM2020 model", "[Full GeoMag]" ) {
         80,
         0
     );
-    CHECK( out.north                == Approx(6224.0).margin(0.1) );
-    CHECK( out.east                 == Approx(-44.5).margin(0.1) );
-    CHECK( out.down                 == Approx(52527.0).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(6224.2).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52894.5).margin(0.1) );
-    CHECK( out.inclination          == Approx(83.24).margin(0.01) );
-    CHECK( out.declination          == Approx(-0.41).margin(0.01) );
+    CHECK( out.north       == Approx(6224.0).margin(0.1) );
+    CHECK( out.east        == Approx(-44.5).margin(0.1) );
+    CHECK( out.down        == Approx(52527.0).margin(0.1) );
+    CHECK( out.horizontal  == Approx(6224.2).margin(0.1) );
+    CHECK( out.total       == Approx(52894.5).margin(0.1) );
+    CHECK( out.inclination == Approx(83.24).margin(0.01) );
+    CHECK( out.declination == Approx(-0.41).margin(0.01) );
 }
 
 
@@ -2683,13 +2683,13 @@ TEST_CASE( "full geomag test 34 of WMM2020 model", "[Full GeoMag]" ) {
         0,
         120
     );
-    CHECK( out.north                == Approx(37694.0).margin(0.1) );
-    CHECK( out.east                 == Approx(-35.3).margin(0.1) );
-    CHECK( out.down                 == Approx(-10362.0).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(37694.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(39092.4).margin(0.1) );
-    CHECK( out.inclination          == Approx(-15.37).margin(0.01) );
-    CHECK( out.declination          == Approx(-0.05).margin(0.01) );
+    CHECK( out.north       == Approx(37694.0).margin(0.1) );
+    CHECK( out.east        == Approx(-35.3).margin(0.1) );
+    CHECK( out.down        == Approx(-10362.0).margin(0.1) );
+    CHECK( out.horizontal  == Approx(37694.1).margin(0.1) );
+    CHECK( out.total       == Approx(39092.4).margin(0.1) );
+    CHECK( out.inclination == Approx(-15.37).margin(0.01) );
+    CHECK( out.declination == Approx(-0.05).margin(0.01) );
 }
 
 
@@ -2704,13 +2704,13 @@ TEST_CASE( "full geomag test 35 of WMM2020 model", "[Full GeoMag]" ) {
         -80,
         240
     );
-    CHECK( out.north                == Approx(5815.0).margin(0.1) );
-    CHECK( out.east                 == Approx(14803.0).margin(0.1) );
-    CHECK( out.down                 == Approx(-49755.3).margin(0.1) );
-    CHECK( out.horizontal_intensity == Approx(15904.1).margin(0.1) );
-    CHECK( out.total_intensity      == Approx(52235.4).margin(0.1) );
-    CHECK( out.inclination          == Approx(-72.27).margin(0.01) );
-    CHECK( out.declination          == Approx(68.55).margin(0.01) );
+    CHECK( out.north       == Approx(5815.0).margin(0.1) );
+    CHECK( out.east        == Approx(14803.0).margin(0.1) );
+    CHECK( out.down        == Approx(-49755.3).margin(0.1) );
+    CHECK( out.horizontal  == Approx(15904.1).margin(0.1) );
+    CHECK( out.total       == Approx(52235.4).margin(0.1) );
+    CHECK( out.inclination == Approx(-72.27).margin(0.01) );
+    CHECK( out.declination == Approx(68.55).margin(0.01) );
 }
 
 
