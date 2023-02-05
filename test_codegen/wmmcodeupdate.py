@@ -173,6 +173,50 @@ typedef struct {
 } Vector;
 
 
+typedef struct {
+    float north;// local north magnetic field (nT)
+    float east;// local east magnetic field (nT)
+    float down;// local down magnetic field (nT)
+    float horizontal;// local horizontal magnetic field intensity (nT)
+    float total;// local total magnetic field intensity (nT)
+    float inclination;// also called the dip angle, 
+    // the angle measured from the horizontal plane to the 
+    // magnetic field vector; a downward field is positive (deg)
+    float declination;// also called the magnetic variation,
+    // the angle between true north and the horizontal component 
+    // of the field, a eastward magnetic field of true North is positive (deg)
+} Elements;
+
+/** Return a struct containing the 7 magnetic elements.
+See https://www.geomag.nrcan.gc.ca/mag_fld/comp-en.php and
+https://www.ngdc.noaa.gov/geomag/icons/faqelems.gif for more info.
+ INPUT:
+    mag_field_itrs: local magnetic field in the itrs coordinate system (T)
+    lat: latitude in degrees, -90 at the south pole, 90 at the north pole.
+    lon: longitude in degrees.
+**/
+inline Elements magField2Elements(Vector mag_field_itrs, float lat, float lon){
+    float x = mag_field_itrs.x*1E9f;
+    float y = mag_field_itrs.y*1E9f;
+    float z = mag_field_itrs.z*1E9f;
+    float phi = lat*((float)(M_PI/180.0));
+    float lam = lon*((float)(M_PI/180.0));
+    float sphi = sinf(phi);
+    float cphi = cosf(phi);
+    float slam = sinf(lam);
+    float clam = cosf(lam);
+    float x1 = clam*x + slam*y;
+    float north = -sphi*x1 + cphi*z;
+    float east = -slam*x + clam*y;
+    float down = -cphi*x1 + -sphi*z;
+    float horizontal = sqrtf(north*north + east*east);
+    float total = sqrtf(horizontal*horizontal + down*down);
+    float inclination = atan2f(down, horizontal)*((float)(180.0/M_PI));
+    float declination = atan2f(east, north)*((float)(180.0/M_PI));
+    return {north, east, down, horizontal, total, inclination, declination};
+}
+
+
 /** Return the position in International Terrestrial Reference System coordinates, units meters.
 Using the WGS 84 ellipsoid and the algorithm from https://geographiclib.sourceforge.io/
  INPUT:
