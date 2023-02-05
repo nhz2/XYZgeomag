@@ -69,7 +69,7 @@ with `geodetic2ecef`. Note that `geodetic2ecef` uses
 single precision floats, so it will only be accurate to about 1 meter.
 You can also convert the magnetic field to 
 the [seven magnetic elements](https://www.ncei.noaa.gov/products/world-magnetic-model) 
-in units of nanoTeslas and degrees.
+in units of nanoTesla and degrees.
 ~~~cpp
 #include "geomag.hpp"
 void setup() {
