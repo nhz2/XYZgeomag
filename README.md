@@ -32,7 +32,7 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 ## Using XYZgeomag
 
-Just download [geomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/geomag.hpp) and include it.
+Just download [geomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/src/geomag.hpp) and include it.
 Here is an example Arduino sketch:
 
 ~~~cpp
@@ -119,16 +119,16 @@ void loop() {
 
 To add new coefficents, download the new `.COF` file from [https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml)
 
-Add the .COF file to the `test_codegen` directory.
+Add the .COF file to the `extras` directory.
 
 Then run for example
-`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../geomag.hpp -n 12` from the `test_codegen` directory.
+`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../src/geomag.hpp -n 12` from the `extras` directory.
 
-In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `geomag.hpp`.
+In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `src/geomag.hpp`.
 
 ## Run Tests
 
-In the `test_codegen` directory.
+In the `extras` directory.
 
 Compile `geomag_test.cpp` for example with the command `g++ geomag_test.cpp -std=c++14`
 
