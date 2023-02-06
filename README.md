@@ -8,8 +8,8 @@ The main function `geomag::GeoMag` calculates the magnetic field around earth in
 
 Unlike most WMM software, which uses latitude, longitude, and altitude inputs to calculate the North East Down components of the magnetic field, `geomag::GeoMag` uses geocentric cartesian coordinates as input, and outputs the magnetic field in the same geocentric cartesian coordinate system as the inputs.
 
-If you want to provide geodetic latitude, longitude, and height, and receive the local North East Down components of the magnetic field: 
-see the `geomag::geodetic2ecef` and `geomag::magField2Elements` example below. 
+If you want to provide geodetic latitude, longitude, and height, and receive the local North East Down components of the magnetic field and the magnetic declination: 
+see the `geomag::geodetic2ecef` and `geomag::magField2Elements` example below.
 Note that latitude and longitude are in units of degrees, and the seven magnetic elements are in units of nanotesla and degrees.
 
 ## Error
