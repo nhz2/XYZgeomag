@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/nhz2/XYZgeomag/workflows/test/badge.svg)](https://github.com/nhz2/XYZgeomag/actions)
 
-Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates using the World Magnetic Model(WMM). Compatible with Arduino.
+Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates using the [World Magnetic Model(WMM)](https://www.ncei.noaa.gov/products/world-magnetic-model). Compatible with Arduino.
 
 The main function `geomag::GeoMag` calculates the magnetic field around earth in the International Terrestrial Reference System(ITRS) and uses units of decimal year, meter, and tesla.
 
@@ -14,7 +14,10 @@ Note that latitude and longitude are in units of degrees, and the seven magnetic
 
 ## Error
 
-XYZgeomag is within 0.5 nT of the official WMM software. 
+XYZgeomag is within 0.5 nT of the official WMM software.
+
+For more information on the limitations of the WMM model, see:
+<https://www.ngdc.noaa.gov/geomag/WMM/limit.shtml>
 
 ## Performance
 
