@@ -2,11 +2,15 @@
 
 [![Build Status](https://github.com/nhz2/XYZgeomag/workflows/test/badge.svg)](https://github.com/nhz2/XYZgeomag/actions)
 
-Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates instead of latitude, longitude, and altitude. Compatible with Arduino.
+Lightweight C++ header-only library for calculating the magnetic field on earth given geocentric cartesian coordinates using the World Magnetic Model(WMM). Compatible with Arduino.
 
-XYZgeomag calculates the magnetic field around earth in the International Terrestrial Reference System(ITRS) and uses units of decimal year, meter, and tesla.
+The main function `geomag::GeoMag` calculates the magnetic field around earth in the International Terrestrial Reference System(ITRS) and uses units of decimal year, meter, and tesla.
 
-Unlike most World Magnetic Model(WMM) software, which uses latitude, longitude, and altitude inputs to calculate the North East Down(NED) components of the magnetic field, XYZgeomag uses geocentric cartesian coordinates as input, and outputs the magnetic field in the same geocentric cartesian coordinate system as the inputs.
+Unlike most WMM software, which uses latitude, longitude, and altitude inputs to calculate the North East Down(NED) components of the magnetic field, `geomag::GeoMag` uses geocentric cartesian coordinates as input, and outputs the magnetic field in the same geocentric cartesian coordinate system as the inputs.
+
+If you want to provide geodetic latitude, longitude, and height, and receive the local North East Down components of the magnetic field: 
+see the `geomag::geodetic2ecef` and `geomag::magField2Elements` examples below. 
+Note that latitude and longitude are in units of degrees, and the seven magnetic elements are in units of nanotesla and degrees.
 
 ## Error
 
@@ -69,7 +73,7 @@ with `geodetic2ecef`. Note that `geodetic2ecef` uses
 single precision floats, so it will only be accurate to about 1 meter.
 You can also convert the magnetic field to 
 the [seven magnetic elements](https://www.ncei.noaa.gov/products/world-magnetic-model) 
-in units of nanoTesla and degrees.
+in units of nanotesla and degrees.
 ~~~cpp
 #include "geomag.hpp"
 void setup() {
