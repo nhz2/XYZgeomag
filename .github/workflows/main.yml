@@ -16,10 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compile tests
-      working-directory: ${{github.workspace}}/extra
+      working-directory: ${{github.workspace}}/extras
       run: g++ geomag_test.cpp -std=c++14
     - name: run tests
-      working-directory: ${{github.workspace}}/extra
+      working-directory: ${{github.workspace}}/extras
       run: ./a.out
   lint:
     runs-on: ubuntu-latest
