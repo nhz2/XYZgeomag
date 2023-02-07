@@ -21,3 +21,8 @@ jobs:
     - name: run tests
       working-directory: ${{github.workspace}}/test_codegen
       run: ./a.out
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: arduino/arduino-lint-action@v1
