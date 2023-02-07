@@ -32,11 +32,11 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 ## Using XYZgeomag
 
-Just download [geomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/src/geomag.hpp) and include it.
+Just download [XYZgeomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/src/XYZgeomag.hpp) and include it.
 Here is an example Arduino sketch:
 
 ~~~cpp
-#include "geomag.hpp"
+#include "XYZgeomag.hpp"
 void setup() {
   // put your setup code here, to run once:
   pinMode(1,INPUT);
@@ -78,7 +78,7 @@ You can also convert the magnetic field to
 the [seven magnetic elements](https://www.ncei.noaa.gov/products/world-magnetic-model) 
 in units of nanotesla and degrees.
 ~~~cpp
-#include "geomag.hpp"
+#include "XYZgeomag.hpp"
 void setup() {
   // put your setup code here, to run once:
   pinMode(1,INPUT);
@@ -122,9 +122,9 @@ To add new coefficents, download the new `.COF` file from [https://www.ngdc.noaa
 Add the .COF file to the `extras` directory.
 
 Then run for example
-`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../src/geomag.hpp -n 12` from the `extras` directory.
+`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../src/XYZgeomag.hpp -n 12` from the `extras` directory.
 
-In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `src/geomag.hpp`.
+In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `src/XYZgeomag.hpp`.
 
 ## Run Tests
 

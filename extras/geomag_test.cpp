@@ -8,7 +8,7 @@
  */
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "../src/geomag.hpp"
+#include "../src/XYZgeomag.hpp"
 
 
 TEST_CASE( "geodetic 2 ecef test 0 model", "[Geodetic]" ) {

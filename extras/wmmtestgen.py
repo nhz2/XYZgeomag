@@ -150,7 +150,7 @@ TEST_CASE( "geomag test %s of %s model", "[GeoMag]" ) {
         f.write(outstr)
 
 if __name__ == '__main__':
-    header_to_test='src/geomag.hpp'
+    header_to_test='src/XYZgeomag.hpp'
     dates=([2015]*6+[2017.5]*6)*2 + [2020]*6 + [2022.5]*6
     modelnames= ['WMM2015']*12 + ['WMM2015v2']*12 + ['WMM2020']*12
     heights=([0]*3+[100]*3+[0]*3+[100]*3)*3

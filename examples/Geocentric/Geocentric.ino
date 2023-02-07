@@ -1,4 +1,4 @@
-#include <geomag.hpp>
+#include <XYZgeomag.hpp>
 
 void setup() {
   // put your setup code here, to run once:
