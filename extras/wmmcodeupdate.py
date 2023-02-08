@@ -397,7 +397,7 @@ if __name__ == '__main__':
     """)
     parser.add_argument('-f',action='append',help="""the .COF files that contains the
         WMM coefficents, download from https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml.""")
-    parser.add_argument('-o',type=str,default='geomag.hpp',help='the c++ header filename to write the coefficents and model')
+    parser.add_argument('-o',type=str,default='../src/XYZgeomag.hpp',help='the c++ header filename to write the coefficents and model')
     parser.add_argument('-n',type=int,default=12,help='maximum number of degrees to use')
     arg=parser.parse_args()
 

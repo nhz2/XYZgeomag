@@ -16,8 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: compile tests
-      working-directory: ${{github.workspace}}/test_codegen
+      working-directory: ${{github.workspace}}/extras
       run: g++ geomag_test.cpp -std=c++14
     - name: run tests
-      working-directory: ${{github.workspace}}/test_codegen
+      working-directory: ${{github.workspace}}/extras
       run: ./a.out
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: arduino/arduino-lint-action@v1
