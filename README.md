@@ -32,7 +32,7 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 ## Using XYZgeomag
 
-Just download [XYZgeomag.hpp](https://raw.githubusercontent.com/nhz2/XYZgeomag/master/src/XYZgeomag.hpp) and include it.
+Just download [XYZgeomag.hpp](https://github.com/nhz2/XYZgeomag/releases/download/v2.0.0/XYZgeomag.hpp) and include it.
 Here is an example Arduino sketch:
 
 ~~~cpp
