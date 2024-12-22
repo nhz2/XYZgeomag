@@ -13,7 +13,7 @@ void loop() {
   float lon = val + 75.0f; // longitude in degrees
   float height = val + 305; // height above WGS84 ellipsoid in meters
   geomag::Vector position = geomag::geodetic2ecef(lat,lon,height);
-  geomag::Vector mag_field = geomag::GeoMag(2022.5,position,geomag::WMM2020);
+  geomag::Vector mag_field = geomag::GeoMag(2027.5,position,geomag::WMM2025);
   geomag::Elements out = geomag::magField2Elements(mag_field, lat, lon);
   Serial.print(out.north);
   Serial.println(" nT north");

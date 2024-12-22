@@ -17,7 +17,7 @@ Note that latitude and longitude are in units of degrees, and the seven magnetic
 XYZgeomag is within 0.5 nT of the official WMM software.
 
 For more information on the limitations of the WMM model, see:
-<https://www.ngdc.noaa.gov/geomag/WMM/limit.shtml>
+<https://www.ncei.noaa.gov/products/world-magnetic-model/accuracy-limitations-error-model>
 
 ## Performance
 
@@ -25,8 +25,8 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 | Device      | Speed    |
 |-------------|----------|
-| Arduino Uno | 52 ms    |
-| Raspberry Pi Pico | 6.5 ms |
+| Arduino Uno R3 | 52 ms    |
+| Raspberry Pi Pico RP2040 | 4.5 ms |
 | Teensy 3.6  |  83 µs |
 | Teensy 4.0  |  21 µs |
 
@@ -117,12 +117,12 @@ void loop() {
 
 ## Adding New Coefficents
 
-To add new coefficents, download the new `.COF` file from [https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml](https://www.ngdc.noaa.gov/geomag/WMM/DoDWMM.shtml)
+To add new coefficents, download the new `.COF` file from <https://www.ncei.noaa.gov/products/world-magnetic-model>
 
 Add the .COF file to the `extras` directory.
 
 Then run for example
-`python wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -o ../src/XYZgeomag.hpp -n 12` from the `extras` directory.
+`python3 wmmcodeupdate.py -f WMM2015.COF -f WMM2015v2.COF -f WMM2020.COF -f WMM2025.COF -o ../src/XYZgeomag.hpp -n 12` from the `extras` directory.
 
 In this example, `WMM2015.COF` ,  `WMM2015v2.COF`, and  `WMM2020.COF` are the `.COF` files to use in `src/XYZgeomag.hpp`.
 
@@ -146,6 +146,8 @@ Using spherical harmonics algorithm, described in sections 3.2.4 and 3.2.5:
 Using geodetic2ecef algorithm from https://geographiclib.sourceforge.io/
 
 Using coefficients and test points from:
+
+NOAA NCEI Geomagnetic Modeling Team; British Geological Survey. 2024: World Magnetic Model 2025. NOAA National Centers for Environmental Information. https://doi.org/10.25921/aqfd-sd83. Accessed [22 DEC 2024].
 
 NCEI Geomagnetic Modeling Team and British Geological Survey. 2019. World Magnetic Model 2020. NOAA National Centers for Environmental Information. doi: 10.25921/11v3-da71, 2020, [10 DEC 2019].
 
