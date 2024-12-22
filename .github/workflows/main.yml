@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: compile tests
       working-directory: ${{github.workspace}}/extras
       run: g++ geomag_test.cpp -std=c++14
@@ -24,5 +24,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: arduino/arduino-lint-action@v1
+        with:
+          library-manager: update
+          compliance: strict
