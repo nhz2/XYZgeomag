@@ -32,7 +32,7 @@ XYZgeomag uses single precision floating points. It's designed to minimize ram u
 
 ## Using XYZgeomag
 
-Just download [XYZgeomag.hpp](https://github.com/nhz2/XYZgeomag/releases/download/v2.0.0/XYZgeomag.hpp) and include it.
+Just download [XYZgeomag.hpp](https://github.com/nhz2/XYZgeomag/releases/download/v2.1.0/XYZgeomag.hpp) and include it.
 Here is an example Arduino sketch:
 
 ~~~cpp
@@ -53,7 +53,7 @@ void loop() {
   geomag::Vector out;
   int starttime=micros();
   int starttimemil=millis();
-  out=geomag::GeoMag(2022.5,in,geomag::WMM2020);
+  out=geomag::GeoMag(2027.5,in,geomag::WMM2025);
   int endtime=micros();
   int endtimemil=millis();
   Serial.print(out.x*1E9);
@@ -92,7 +92,7 @@ void loop() {
   float lon = val + 75.0f; // longitude in degrees
   float height = val + 305; // height above WGS84 ellipsoid in meters
   geomag::Vector position = geomag::geodetic2ecef(lat,lon,height);
-  geomag::Vector mag_field = geomag::GeoMag(2022.5,position,geomag::WMM2020);
+  geomag::Vector mag_field = geomag::GeoMag(2027.5,position,geomag::WMM2025);
   geomag::Elements out = geomag::magField2Elements(mag_field, lat, lon);
   Serial.print(out.north);
   Serial.println(" nT north");
